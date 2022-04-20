@@ -1,0 +1,131 @@
+.service_hero{
+  padding-top:100px;
+  position: relative;
+  height: 100vh;
+  margin-bottom: 113px;
+  @include smMax{
+    padding-top:0px;
+    margin-bottom: 0;
+  }
+  .srv-hero-text{
+    z-index: 9;
+    flex: auto;
+    -ms-flex-flow: row wrap !important;
+       flex-flow: row wrap !important;
+    @include smMax{
+      -ms-flex-flow: row wrap !important;
+       flex-flow: row wrap !important;
+    }
+  }
+  h1,h3{
+    outline: none;
+    text-decoration: none;
+    width: 100%;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: fontSize(fontSize50);
+    line-height: 60px;
+    color: primaryColor(whiteColor);
+    padding-bottom: 48px;
+    min-width: 698px;
+    position: relative;
+    overflow: hidden;
+    word-break: break-word;
+    @include smMax{
+      font-size: fontSize(fontSize34);
+      line-height: 44px;
+      color: primaryColor(whiteColor);
+      min-width: 100%;
+    }
+    .textWrap {
+      width: 50%;
+      position: absolute;
+      top: 0;
+      display: block;
+      height: 100%;
+      overflow: hidden;
+      @include mdMinMax{
+        display: none;
+      }
+      @include smMax{
+        display: none;
+      }
+    }
+    .textSplit {
+      width: 200%;
+      position: absolute;
+      color: primaryColor(blackColor);
+    }
+    
+  }
+  figure{
+    width: 100%;  
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center center;
+      object-position: center center;
+    }
+    &.transparentOverlay{
+      &:before{
+        height: calc(100vh - 100px);
+        @include smMax{
+          height: 100vh;
+        }
+      }
+    }
+  }
+  
+}
+.srv-heroImg{
+  position: absolute;
+  right: 0;
+}
+.ser-height{
+  height: calc(100vh - 100px);
+  @include smMax{
+    height: 100vh;
+  }
+}
+/**service inner start here**/
+.srv-hero-textInner{
+    position: relative;
+    @include smMax{
+      transform: none;
+      top: auto;
+      padding-bottom: 20px;
+      .common_cta.colored_cta{
+        .common_cta_inner{
+          border: 1px solid primaryColor(whiteColor);
+        }
+        .cmn_link span{
+         
+          &::after{
+            background: url(../../images/arrow-white.png) no-repeat 0 0;
+            background-size: contain;
+          }
+        }
+      }
+    };
+    @include col{
+      .common_cta {
+        .cmn_link span{
+          font-size: 12px;
+        }
+      }
+    };
+}
+
+/**service_hero_short_text css start here**/
+.service_hero_short_text{
+   margin-bottom: 113px;
+   @include smMax{
+     margin-bottom: 0px;
+   }
+
+}

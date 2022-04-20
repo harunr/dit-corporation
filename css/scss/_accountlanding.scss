@@ -1,0 +1,299 @@
+.shw{display: none;}
+.social_section{
+    &#social_sections{display: none;}
+    float: right;
+    z-index: 0;
+    li{margin-bottom:10px;}
+    span{
+        display:block;
+        margin-bottom:10px;
+    }
+}
+/**redesign css for account landing page**/
+  .account_landing_main{
+     padding-top: 100px;
+     padding-bottom: 100px;
+  }
+  ul.company-info{
+      list-style: none;
+      text-align: left;
+      margin-top: 41px;
+      padding-left: 34px;
+      li{
+          display: block;
+          margin-bottom: 52px;
+          h6{
+            font-family: fontFamily(gilroyRegular);
+            font-size: fontSize(fontSize24);
+            line-height: 25px;
+            color: primaryColor(blackColor);
+            margin-bottom: 18px;
+          }
+          p{
+            font-family: fontFamily(gilroyBold);
+            font-size: fontSize(fontSize15);
+            line-height: 16px;
+            color: primaryColor(blackColor);
+            letter-spacing: 2.5px;
+            span{
+                color: primaryColor(lighttealColor);
+                text-transform: uppercase;
+                padding-left: 6px;
+                display: inline-block;
+                &:first-child{
+                    padding-left: 0px;
+                }
+            }
+          }
+      }
+  }
+  .upper-floating-div{
+    padding-right:23px;
+  }
+  .clientholder_detail 
+  {
+     text-align: center;
+     margin-top: -300px;
+     background: #ffffff;
+      padding: 40px 0;  
+    .cntr_div{
+        max-width: 100%;
+        margin: 0 auto;
+        padding-left: 78px;
+        padding-right: 78px;
+        img{
+            max-width: 200px;
+        }
+        @include mdMax{
+            padding-left: 0px;
+        }
+    }
+  }
+  .next_project{
+      padding:130px 0;
+      @include mdMax {
+          text-align: center;
+          padding: 100px 0;
+      }
+      h3{
+        font-family: fontFamily(quartoRegular);
+        font-size: fontSize(fontSize50);
+        line-height: 60px;
+        color: primaryColor(blackColor);
+        margin-bottom: 37px;
+        @include mdMax {
+            font-size: fontSize(fontSize34);
+            line-height: 44px;
+        }
+      }
+      ul {
+          li{
+              list-style: none;
+              a{
+                font-family: fontFamily(quartoLight);
+                font-size: fontSize(fontSize60);
+                line-height: 60px;
+                color: primaryColor(blackColor);
+                text-transform: uppercase;
+                @include mdMax {
+                    font-size: fontSize(fontSize34);
+                    line-height: 42px;
+                }
+              }
+          }
+          @include mdMax {
+              max-width: 172px;
+              margin: 0 auto;
+          }
+      }
+  }
+
+  /**services slider css start here**/
+  .service_slider{
+      position: relative;
+      .slide_row{
+        height: 100vh; 
+      }
+      figure{
+          height: calc(100vh + 7px);
+          margin: 0;
+          img{
+              vertical-align: top;
+          }
+      }
+      .service_slider_desc_wrap{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        .service_slider_desc{
+            color: #ffffff;
+            padding-bottom: 95px;
+            h1{
+                font-family: fontFamily(quartoLight);
+                 font-size: fontSize(fontSize60);
+                line-height: 64px;
+               color: primaryColor(whiteColor);
+               margin-bottom: 35px;
+               @include mdMax {
+                font-size: fontSize(fontSize36);
+                line-height: 44px;
+               }
+            }
+            p{
+                font-family: fontFamily(gilroyRegular);
+                font-size: fontSize(fontSize24);
+                 line-height: 30px;
+                color: primaryColor(whiteColor);
+                margin-bottom: 10px;
+                @include mdMax {
+                    font-size: fontSize(fontSize18);
+                    line-height: 24px;
+                }
+            }
+            span{
+                font-family: fontFamily(gilroySemiBold);
+                font-size: fontSize(fontSize15);
+                line-height: 30px;
+                color: primaryColor(lighttealColor);
+                margin-bottom: 30px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
+                @include mdMax {
+                    font-size: fontSize(fontSize18);
+                    line-height: 24px;
+                }
+            }
+            @include smMax {
+                display: none;
+            }
+        }
+        &.transparentOverlay:before{
+            height: calc(100vh + 7px);
+        }
+      }
+      .main_service_nav{
+        position: absolute;
+        top: 0;
+        height: 100vh;
+      // align-items: center;
+        padding: 0px 0 0;
+        max-width: 373px;
+        z-index: 999; 
+        display: flex;
+        align-items: center;
+        @include mdMax {
+            max-width: 273px;
+        }
+        @include smMax {
+            max-width: 273px;
+        }
+        .slick-current{     
+            .slide-link{   
+                opacity: 1;
+                font-family: fontFamily(gilroySemiBold);
+                span{
+                    &:before{
+                        display: block;
+                    }
+                }
+               
+            }
+        }  
+        .slick-slide{
+            border: 0px;
+            outline: none!important;
+            &:last-child{
+                .slide-link{
+                    margin-bottom: 0px;
+                }
+            }
+            &.prevdiv,&.nextdiv,&.slick-cloned.slick-active.prevdiv,&.slick-cloned.slick-active.nextdiv{
+                .slide-link{
+                    opacity: 0.7;
+                }
+            }
+            &.slick-cloned.prevdiv,&.slick-cloned.nextdiv{
+                .slide-link{
+                    opacity: 0.3;
+                }
+            }
+        }  
+        
+        .slide-link{
+         font-family: fontFamily(gilroylight);
+           font-size: fontSize(fontSize24);
+          line-height: 30px;
+          color: primaryColor(whiteColor);
+          margin-top:30px;
+          margin-bottom: 30px;
+          display: block;
+          letter-spacing: 1.5px;
+          position: relative;
+          padding-left: 60px;
+          cursor: pointer;
+          opacity: 0.3;
+          max-width: 340px;
+         span{
+             position: relative;
+            &:before{
+                content: '';
+                width: 28px;
+                border-top: 2px solid #fff;
+                height: 2px;
+                display: block;
+                position: absolute;
+                left: -60px;
+                top: 50%;
+                margin-top: -1px;
+                display: none;
+                transition: none;
+            }
+         }
+          
+             
+          @include mdMax {
+              font-size: fontSize(fontSize18);
+              line-height: 24px;
+              letter-spacing: 1.13px;
+              margin-top:20px;
+             margin-bottom: 20px;
+          }
+       
+         
+        }
+    } 
+  }
+  .slick-vertical .slick-slide{
+     // min-width: 342px;
+    //  width:342px!important;
+      transition: none;
+      @include mdMax {
+      //  min-width: 273px;
+     //   width:273px!important;
+      }
+  }
+ 
+  .sharect{
+      border-radius: 50%!important;
+      width: 47px;
+      height: 47px;
+      margin-top: -20px;
+     svg{
+         width:35px;
+     }
+  }
+  .sharect > div:first-child{
+    text-align: center;
+    padding-top: 5px;
+    div{
+        margin-right: 0px!important;
+        margin-left:0px!important;
+    }
+  }
+  .sharect > div:last-child{
+      border-width:10px!important;
+      bottom: -5px!important;
+  }

@@ -1,0 +1,553 @@
+.contact_us_page{
+  padding-top: 97px;
+  background: primaryColor(blackColor);
+  .contact_form_sec{
+    padding-bottom: 80px;
+    @include smMax{
+      padding-top:85px;
+    } 
+  }
+}
+/**contact form sec css start here**/
+
+.contact_form_sec{
+    width: 100%;
+    background: primaryColor(blackColor);
+    padding: 150px 0px 150px;
+    font-family: fontFamily(gilroySemiBold);
+    color: primaryColor(whiteColor);
+    clear: both; 
+    @include smMax{
+      padding:70px 0 60px;
+    } 
+}
+/**contact form sec css start here**/
+.contact_form_spacing{
+  padding:0px 14px 0 66px;
+  @include mdMinMax{
+    padding:0px;
+  }
+  @include smMax{
+    padding:0px;
+  } 
+}
+.contact_form{
+    font-size: fontSize(fontSize24);
+    line-height: 50px;
+    font-family: fontFamily(gilroyRegular);
+    color: primaryColor(whiteColor);  
+    p{
+      font-size: fontSize(fontSize24);
+      line-height: 50px;
+      font-family: fontFamily(gilroylight);
+      margin-bottom: 50px;
+      font-weight: 300;
+      @include smMax{
+        font-size: fontSize(fontSize18);
+        line-height: 36px;
+      }
+    }
+    
+}
+.captcha{
+  margin-bottom: 50px;
+  margin-top: 17px;
+  img{
+    max-width: 313px;
+    @include col{
+      max-width: 270px;
+    }
+  }
+  @include smMax{
+    margin-bottom: 60px;
+    margin-top: 40px;
+  }
+}
+.mb15{
+  margin-bottom: 15px!important;
+}
+.fileInput{
+  margin-bottom: 10px;
+}
+/**contact form left css start here**/
+.contactLeft{
+  padding-right: 28px;
+  @include mdMinMax{
+    padding-bottom: 60px; 
+  }
+  @include smMax{
+    padding-bottom: 60px;
+    padding-right:0px;
+    h3{ 
+        font-size: fontSize(fontSize34);
+        line-height: 44px;   
+     }
+  }
+   
+}
+
+.text_fade{
+  opacity: 1;
+}
+
+ /**our location css start here**/
+.our_location{
+  width:100%;
+  clear: both;
+  background: primaryColor(whiteColor);
+  overflow: hidden;
+ /**our location left css start here**/  
+.our_location_left{
+     img{
+      object-fit: cover;
+      width:100%;
+      display: block;
+      vertical-align: top;
+      height: 100%;
+      filter: none!important;
+     transform: none!important;
+      @include smMax{
+        height: auto;
+      }
+     }
+     .slick_for{
+       height: 100%;
+       .slick-list,.slick-track{
+         height: 100%;
+       }
+       .slick-slide{
+         div{
+           height: 100%;
+           position: relative;
+         }
+       }
+        li{
+          vertical-align: top;
+          height: 100%;
+        }
+     }
+  }
+  /**our location left css end here**/  
+   /**our location right css end here**/ 
+  .our_location_right{
+    padding:184px 102px 175px 136px;
+    @include cuMax{
+      padding-left: 100px;
+    }
+    @include lgMax{
+      padding:80px 30px 80px 30px
+    }
+    @include smMax{
+      padding:72px 0px 66px;
+    }
+    h3{
+      color: primaryColor(blackColor);
+      @include smMax{
+        font-size: fontSize(fontSize34);
+        line-height: 44px;
+        padding-left: 27px;
+        padding-right: 27px;
+        margin-bottom: 38px!important;
+        padding-bottom: 0px!important;
+        br{
+          display: none;
+        }
+      }
+      
+    }
+    /**loaction tab css start here**/ 
+    .location_tab{
+      @include smMax{
+        padding-bottom: 0px!important;
+        margin-bottom: 43px!important;
+      }
+      .tab_ul{  
+        .tab_li{     
+           padding:0 30px 0 30px;
+           @include lgMax{
+            padding:0 10px 0 10px;
+           }
+           @include smMax{      
+             text-align: center!important;
+             padding:0 30px 0 30px;
+             
+             
+           }
+           span{
+            color: primaryColor(blackColor);
+            font-size: fontSize(fontSize18);
+            line-height: normal;
+            font-family: fontFamily(gilroyRegular);
+            text-transform: uppercase;
+            letter-spacing: 1.13px;
+            padding-bottom: 8px;
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            @include smMax{
+              font-size: fontSize(fontSize24);
+              font-family: fontFamily(quartoLight);
+              text-transform:initial;
+              padding-bottom: 4px;
+            }
+           }
+          
+        }
+        & .slick-current{
+            .tab_li{
+                span{
+                  border-bottom: 2px solid primaryColor(lighttealColor);
+                  font-family: fontFamily(gilroySemiBold);
+                  @include smMax{
+                    border-bottom: 3px solid primaryColor(lighttealColor);
+                    font-family: fontFamily(quartoRegular);
+                  }
+                }
+            }
+        }
+        & .slick-slide{
+          outline:none;
+          &:last-child{
+            .tab_li{
+               text-align: right;
+               padding-right: 0px;
+               @include lgMax{
+                padding-right: 10px;
+               }
+               @include smMax{
+                 text-align: center;
+                 padding-right: 30px;
+               }
+            }
+          }
+          &:first-child{
+            .tab_li{
+               padding-left: 0px;
+               @include lgMax{
+                padding-left: 10px;
+               }
+               @include smMax{
+                padding-left: 30px;
+               }
+            }
+          }
+          @include smMax{
+                  li{
+                    position: relative;
+                      &:before{
+                        content: " ";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: 0 0 50px primaryColor(whiteColor)!important;
+                        z-index: 9999;
+                        background: primaryColor(whiteColor);
+                        opacity: 0.7;
+                  }
+                }
+                &.slick-center{
+                  li{
+                    &::before{
+                      display: none;
+                    }
+                  }
+                }
+                &.slick-cloned{
+                  display: none;
+                }
+          }
+        }
+      } 
+    }
+     /**tab loaction content css start here**/ 
+    .location_tab_content{
+      @include smMax{
+        padding-right: 27px;
+        padding-left:27px;
+      }
+       .location_info{
+         margin-bottom: 40px;
+         @include smMax{
+           text-align: center;
+           margin-bottom: 36px;
+         }
+         span{
+          font-size: fontSize(fontSize16);
+          line-height: 35px;
+          color: primaryColor(blackColor);
+          font-family: fontFamily(gilroySemiBold);
+          letter-spacing: 1.6px;
+          display: block;
+          text-transform: uppercase;
+          opacity: 0.5;
+          @include smMax{
+            font-size: fontSize(fontSize14);
+            line-height: 20px;
+            color: primaryColor(greyColor);
+            opacity: 1;
+            padding-bottom: 5px;
+          }
+         }
+         p{
+          font-size: fontSize(fontSize24);
+          line-height: 38px;
+          color: primaryColor(blackColor);
+          font-family: fontFamily(gilroyRegular);
+          letter-spacing: 0.92px;
+          span{
+            font-size: fontSize(fontSize24);
+            line-height: 38px;
+            color: primaryColor(blackColor);
+            font-family: fontFamily(gilroyRegular);
+            letter-spacing: 0.92px;
+            display: block;
+            opacity: 1;
+            padding: 0;
+          }
+          a{
+            color: primaryColor(blackColor);
+            word-break: break-all;
+            outline: none;
+          }
+          @include smMax{
+            font-size: fontSize(fontSize18);
+            line-height: 33px;
+            span{
+              font-size: fontSize(fontSize18);
+              line-height: 33px;
+            }
+          }
+         }
+         &:last-child{
+           margin-bottom: 0px;
+         }
+       }
+    }
+ }
+}    
+
+/**dropdown loaction css start here**/ 
+.dropdown_location{
+  display: inline-block;
+  .dropdown-menu{
+    min-width: 100px;
+    max-width: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+    & a{
+      padding-top: 5px;
+      padding-bottom:5px;
+    }
+  }
+  
+  .btn{
+    background: none;
+    padding: 0;
+    width:auto;
+    box-shadow: none!important;
+    font-size: fontSize(fontSize50);
+    color: primaryColor(blackColor);
+    font-family: fontFamily(quartoRegular);
+    line-height: normal;
+    height: auto;
+    border: 0;
+    vertical-align: top; 
+    @include smMax{
+      font-size: fontSize(fontSize34);
+     
+    } 
+    &:after{
+      background: url(../../images/dropdown@2x.png) no-repeat 0 0;
+      width: 13px;
+      height: 13px;
+      border: 0px;
+      background-size: 100%;
+      margin-left: 5px;
+      vertical-align: 7px;
+      @include smMax{
+        margin-left: 2px;
+        vertical-align: 2px;
+      }
+    }
+    span{
+      display: inline-block;
+      border-bottom: 3px solid primaryColor(lighttealColor);
+      line-height: 50px;
+      @include smMax{
+        line-height: 34px;
+        border-bottom: 0px solid primaryColor(lighttealColor);
+        &:after{
+          content:"";
+          width:100%;
+          border-bottom: 2px solid primaryColor(lighttealColor); 
+          height: 2px;
+          position: absolute;
+          bottom: 4px;
+          left: 0;   
+        }
+      }
+    }
+  }
+  .dropdown-item{
+    font-family: fontFamily(gilroySemiBold);
+    font-size: fontSize(fontSize14);
+    line-height: normal;
+    color: primaryColor(blackColor);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    text-align: center;
+    // word-break: break-word; 
+    // white-space: normal;
+    &:hover{
+      border-bottom: 2px solid primaryColor(lighttealColor);
+    }
+    &.selectedLi{
+      border-bottom: 2px solid primaryColor(lighttealColor);
+    }
+  }
+}
+/**slider display none and block start here**/
+.slick_for,.locAdd{
+  display: none;
+  &.current{
+    display: inherit;
+  }
+}
+/**slider display none and block end here**/
+
+
+/**contact us tabs css start here**/
+.contact_tabs{
+   .nav{
+     .slick-slide{
+       outline: none;
+       @include smMax{
+        li{
+          position: relative;
+            &:before{
+              content: " ";
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              box-shadow: 0 0 50px primaryColor(blackColor)!important;
+              z-index: 9999;
+              background: primaryColor(blackColor);
+              opacity: 0.7;
+        }
+        .nav-link.active{
+          border-color: transparent;
+        }
+      }
+      &.slick-center{
+        li{
+          &::before{
+            display: none;
+          }
+          .nav-link{
+            border-color: primaryColor(lighttealColor);
+          }
+        }
+      }
+      &.slick-cloned{
+        display: none;
+      }
+      } 
+     }
+     li{
+       margin-bottom: 48px;
+       @include smMax{
+         padding:0 30px;
+         text-align: center;
+         margin: 0;
+       }
+      }
+     .nav-link{
+      font-family: fontFamily(quartoLight);
+      font-size: fontSize(fontSize34);
+      line-height: 60px;
+      color: primaryColor(whiteColor);
+      padding: 0px;
+      display: inline-block;
+      border-bottom: 3px solid  transparent;
+      font-weight: 300;
+      transition: 1s;
+      outline: none;
+      &.active{
+        border-bottom: 3px solid primaryColor(lighttealColor);
+        font-family: fontFamily(quartoRegular);
+      }
+      @include smMax{
+        font-size: fontSize(fontSize24);
+        line-height: normal;
+      }
+     }
+   }
+}
+.tab-content-contact{
+  @include smMax{
+    .slick-current{
+      .fade{
+        opacity: 1!important;
+      }
+    }
+    
+  }
+}
+/**search result position css start here**/
+.position_result{
+   ul{
+     li{
+        padding: 25px 25px 30px;
+        border-bottom: 1px solid primaryColor(greyColor);
+        @include smMax{
+          padding: 15px 25px 15px;
+        }
+       a{
+        font-family: fontFamily(gilroyMedium);
+        font-size: fontSize(fontSize24);
+        line-height: 50px;
+        color: primaryColor(whiteColor);
+        display: block;
+        @include smMax{
+          font-size: fontSize(fontSize24);
+          line-height: 26px;
+        }
+        span{
+          display: block;
+          font-family: fontFamily(gilroyRegular);
+          font-size: fontSize(fontSize18);
+          line-height: 34px;
+          color: primaryColor(greyColor);
+        }
+       }
+       &:first-child{
+         padding-top: 0px;
+       }
+      
+     }
+   }
+}
+
+/**search result position css end here**/
+/**contact us tabs css end here**/
+
+.contact-head{
+  max-width: 280px;
+}
+
+.contact_us_page{
+    .common_cta .cmn-link-con .cmn-link{top: calc(50% - 60px);
+    
+        @include smMax{
+            top: calc(50% - 44px)
+        }
+    }
+}

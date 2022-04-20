@@ -1,0 +1,437 @@
+.career-listing {
+  h2 {
+    font-size: fontSize(fontSize16);
+    font-family: fontFamily(gilroySemiBold);
+    letter-spacing: 1px;
+    color: primaryColor(blackColor);
+    padding: 0 0 16px 0;
+    
+    @include smMax {
+      font-size: fontSize(fontSize14);
+      letter-spacing: 0.88px;
+      padding: 0 0 10px 0;
+    }
+  }
+
+  .divide-border {
+    border-bottom: 1px solid primaryColor(greyColor);
+    opacity: 0.5;
+  }
+
+  h3 {
+    font-size: fontSize(fontSize18);
+    font-family: fontFamily(gilroySemiBold);
+    line-height: 1.94;
+    letter-spacing: 1.8px;
+    color: primaryColor(greyColor);
+    @include smMax {
+      font-size: fontSize(fontSize14);
+      line-height: 1.57;
+      letter-spacing: 1.4px;
+    }
+  }
+
+  h4 {
+    font-size: fontSize(fontSize34);
+    font-family: fontFamily(quartoRegular);
+    line-height: 1.76;
+    color: primaryColor(blackColor);
+    @include smMax {
+      font-size: fontSize(fontSize24);
+      line-height: 1.58;
+    }
+  }
+  .backTo{
+    display: block;
+    a{
+      display: inline-block;
+      font-family: fontFamily(gilroySemiBold);
+      font-size: fontSize(fontSize16);
+      color: primaryColor(blackColor);
+      letter-spacing: 2.67px;
+      margin: 60px 0 60px 0;
+      position: relative;
+      padding-left: 40px;
+      @include smMax {
+        font-size: fontSize(fontSize14);
+        margin: 53px 0 50px 0;
+      }
+      &:before {
+        width: 30px;
+        height: 10px;
+        content: "";
+        position: absolute;
+        background: url(../../images/icon-arrow-black.png) no-repeat;
+        opacity: 1;
+        left: 0;
+        top: 50%;
+        margin-top: -3px;
+      }
+    }
+  }
+  // .back {
+  //   display: block;
+  //   P {
+  //     font-size: fontSize(fontSize16);
+  //     font-family: fontFamily(gilroySemiBold);
+  //     letter-spacing: 2.67px;
+  //     color: primaryColor(blackColor);
+  //     margin: 160px 0 90px 0;
+  //     @include smMax {
+  //       font-size: fontSize(fontSize14);
+  //       margin: 51px 0 50px 0;
+  //     }
+
+  //     &:before {
+  //       width: 30px;
+  //       height: 10px;
+  //       content: "";
+  //       background: url(../../images/icon-arrow-black.png) no-repeat;
+  //       opacity: 1;
+  //       display: inline-block;
+  //       margin: 0 10px 0px 0;
+  //     }
+  //   }
+  // }
+
+  .career-content {
+
+    .job_list{
+      padding: 32px 0 29px;
+      color: primaryColor(greyColor);
+      border-bottom: 1px solid rgba(158, 158, 158, .5);
+      -webkit-background-clip: padding-box; /* for Safari */
+      background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+      ul{
+        @include col{
+          margin-bottom: 10px;
+        }
+        li{
+          display: inline-block;
+          font-family: fontFamily(gilroySemiBold);
+          font-size: fontSize(fontSize18);
+          line-height: 1.94;
+          letter-spacing: 1.8px;
+          position: relative;
+          @include smMax{
+            font-size: fontSize(fontSize14);
+          }
+          &:first-child{
+            margin-right: 25px;
+            padding-right: 25px;
+            @include smMax{
+              margin-right: 15px;
+              padding-right: 15px;
+            }
+            &::after{
+              width: 2px;
+              height: 17px;
+              content: '';
+              background: primaryColor(greyColor);
+              position: absolute;
+              top: 50%;
+              right: 0;
+              margin-top: -8.5px;
+              @include smMax{
+                height: 14px;
+                margin-top: -7px;
+              }
+            }
+          }
+        }
+      }
+      h3{
+        a{
+          display: inline-block;
+          color: primaryColor(blackColor);
+          font-family: fontFamily(quartoRegular);
+          font-size: fontSize(fontSize34);
+          line-height: 1.76;
+          @include smMax{
+            font-size: fontSize(fontSize24);
+          }
+        }
+      }
+      p{
+        font-size: fontSize(fontSize24);
+        line-height: 2.08;
+        @include smMax{
+          font-size: fontSize(fontSize18);
+          line-height: 2;
+        }
+      }
+    }
+
+    // p {
+    //   font-size: fontSize(fontSize24);
+    //   font-family: fontFamily(gilroylight);
+    //   line-height: 2.08;
+    //   color: primaryColor(greyColor);
+    //   padding: 0 0 29px 0;
+    //   @include smMax {
+    //     font-size: fontSize(fontSize18);
+    //     line-height: 2;
+    //   }
+    // }
+    // .sub-heading {
+    //   margin: 29px 0 5px 0;
+    //   .bar {
+    //     margin: 0 24px 0 25px;
+    //     font-size: fontSize(fontSize16);
+    //     line-height: 1.94;
+    //     letter-spacing: 1.8px;
+    //     color: primaryColor(greyColor);
+    //     @include smMax {
+    //       display: none;
+    //     }
+    //   }
+    //   h3:last-child{
+    //     @include smMax {
+    //       display: none;
+    //     }
+    //   }
+    // }
+  }
+
+  ul.heading {
+    display: flex;
+    align-items: center;
+    margin: 0 0 60px 0;
+    @include smMax {
+      margin: 0 0 50px 0;
+      display: block;
+    }
+    & > li {
+      display: inline-block;
+      text-align: right;
+      @include col{
+        margin-bottom: 15px;
+      }
+      h1 {
+        font-size: fontSize(fontSize50);
+        line-height: 1.2;
+        color: primaryColor(blackColor);
+        margin: 0 19px 0 19px;
+        @include smMax {
+          font-size: fontSize(fontSize28);
+          line-height: normal;
+          margin: 0 10px 0 10px;
+        }
+      }
+      & .btn-secondary {
+        background: none !important;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none !important;
+        padding: 0;
+        font-family: fontFamily(quartoRegular);
+        font-size: fontSize(fontSize50);
+        line-height: 50px;
+        border-bottom: 3px solid primaryColor(lighttealColor);
+        @include smMax {
+          font-size: fontSize(fontSize30);
+          line-height: 34px;
+        }
+      }
+      & .dropdown-menu {
+        min-width: 100px;
+        max-width: 200px;
+        border: none;
+        max-height: 250px;
+        overflow: auto;
+        .dropdown-item {
+          font-family: fontFamily(gilroySemiBold);
+          color: primaryColor(blackColor);
+          font-size: fontSize(fontSize16);
+          line-height: normal;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border-bottom: 2px solid transparent;
+          padding-bottom: 5px;
+          -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+          text-align: center;
+          padding-top: 11px;
+          padding-bottom: 7px;
+          line-height: 20px;  
+          word-wrap: break-word;
+          &:hover {
+            border-bottom: 2px solid primaryColor(lighttealColor);
+          }
+          &.selectedLi {
+            border-bottom: 2px solid primaryColor(lighttealColor);
+          }
+        }
+      }
+    }
+  }
+  #departmentDropdown,
+  #locationDropDown {
+    span {
+      width: auto;
+      display: inline-block;
+      text-align: right;
+      color: primaryColor(blackColor);
+    }
+    &::after {
+      top: 1px;
+      position: relative;
+      color: primaryColor(blackColor);
+      font-size: fontSize(fontSize30);
+      margin-left: 0;
+    }
+  }
+
+  .career-load {
+    height: 140px;
+    width: 100%;
+    a {
+      font-family: fontFamily(gilroySemiBold);
+      font-size: fontSize(fontSize16);
+      letter-spacing: 2.67px;
+      transition: all 0.25s ease-out;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+.big_Text{font-size:fontSize(fontSize50)!important ; line-height: 60px !important; font-family: fontFamily(quartoRegular); color: primaryColor(whiteColor) !important ;}
+.mb90{margin-bottom: 90px;}
+/* select starting stylings ------------------------------*/
+.select {
+	position: relative;
+  width: 350px;
+  max-width: 100%;
+}
+
+.select-text {
+	position: relative;
+  font-family: fontFamily(gilroylight);
+	background-color: transparent;
+	width: 100%;
+	padding: 10px 10px 10px 0;
+	font-size:24px;
+	border-radius: 0;
+	border: none;
+  border-bottom: 1px solid #90e4bb;
+  color:#ffffff !important;
+  option{color: #333333;}
+
+}
+
+/* Remove focus */
+.select-text:focus {
+	outline: none;
+	border-bottom: 1px solid rgba(0,0,0, 0);
+}
+
+	/* Use custom arrow */
+.select .select-text {
+	appearance: none;
+	-webkit-appearance:none
+}
+
+.select:after {
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	/* Styling the down arrow */
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid rgba(0, 0, 0, 0.12);
+	pointer-events: none;
+}
+
+
+/* LABEL ======================================= */
+.select-label {
+	color: #9e9e9e;
+	font-size: 14px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: -20px;
+	transition: 0.2s ease all;
+}
+
+/* active state */
+.select-text:focus ~ .select-label, .select-text:valid ~ .select-label {
+	color: #9e9e9e !important;
+	top: -20px;
+	transition: 0.2s ease all;
+	font-size: 14px;
+}
+
+/* BOTTOM BARS ================================= */
+.select-bar {
+	position: relative;
+	display: block;
+  width: 100%;
+  
+}
+
+.select-bar:before, .select-bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+  transition: 0.2s ease all;
+  border-bottom:1px solid #ffffff
+}
+
+.select-bar:before {
+	left: 50%;
+}
+
+.select-bar:after {
+	right: 50%;
+}
+
+/* active state */
+.select-text:focus ~ .select-bar:before, .select-text:focus ~ .select-bar:after {
+	width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.select-highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+  left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  position: absolute;
+  border-top: 12px solid #ffffff;
+  right: 10px;
+  top: 31px;
+}
+
+/**dropdown css for right in responsive view**/
+.dropdown-item{
+  white-space: pre-wrap!important;
+  word-wrap: break-word!important;
+}
+.dropdown-menu-right.dropdown-menu{
+  max-width: 200px;
+  max-height: 200px;
+  overflow: auto;
+  min-width: 90px;
+}
+
+  

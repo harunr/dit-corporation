@@ -1,0 +1,80 @@
+.clients_logo_content{
+    padding: 175px 0;
+    @include smMax{
+        padding: 70px 0 86px;
+    }
+    p{
+        width: 872px;
+        font-family: fontFamily(gilroyRegular);
+        font-size: fontSize(fontSize30);
+        margin: 0 auto;
+        line-height: 1.67;
+        text-align: center;
+        @include smMax{
+            width: 100%;
+            font-size: fontSize(fontSize18);
+        }
+        @include mdMinMax{
+            width: 100%;
+        }
+    }
+    & .client_logo_img{
+        padding: 103px 0 115px;
+        & .col-sm-3:nth-child(-n+4){
+            margin-bottom: 80px;
+        }
+        @include smMax{
+            & .col-sm-3:nth-child(-n+4){
+                margin-bottom: 0;
+            }
+            & .col-sm-3{
+                margin-bottom: 30px!important;
+            }
+            padding: 50px 18px 46px;
+        }
+        & .logo_holder{
+            width: 100%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & .ci-image-wrapper{
+                display: flex!important;
+                align-items: center;
+                justify-content: center;
+                & .ci-image{
+                    width: auto;
+                    height: auto!important;
+                    display: inline-block;  
+                   max-width: 200px;
+                }
+                @include smMax{
+                    .ci-image{
+                    width: inherit;
+                    max-width: 70%;
+                    }
+                }
+                @include mdMinMax{
+                    .ci-image{
+                        width: inherit;
+                        max-width: 70%;
+                    }  
+                }
+               
+            }
+            @include smMax{
+                height: 75px;
+                img{
+                    max-width: 80%;
+                }
+            }
+            @include mdMinMax{
+                img{
+                    max-width: 75%;
+                } 
+            }
+            
+        }
+    }
+}
+.slideshow{width:100%; height: 960px; background: url(../../images/image-left-slider@2x.jpg) no-repeat; background-size: cover;}

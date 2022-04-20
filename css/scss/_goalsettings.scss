@@ -1,0 +1,33 @@
+.goal_settings{
+  background-color: transparent;
+  padding: 236px 0 182px;
+  @include smMax {
+    padding: 196px 0 182px;
+  }
+  h3{
+    color: primaryColor(blackColor);
+    margin-bottom: 54px;
+    @include smMax {
+      margin-bottom: 45px;
+    }
+  }
+   ol{
+     li{
+      // font-family: fontFamily(gilroylight);
+      // font-size: fontSize(fontSize30);
+      // line-height: 46;
+      color: primaryColor(blackColor);
+      span:last-child{
+        max-width: 452px;
+      }
+      @include smMax {
+        margin-bottom: 32px;
+        padding-left: 75px;
+        span.counter:after{
+          width: 25px;
+          right: -19px;
+        }
+      }
+     }
+   }
+}

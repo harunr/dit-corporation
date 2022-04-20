@@ -1,0 +1,98 @@
+.main_message_content{
+    @include smMax{
+        padding-bottom: 90px;
+    }
+    & h2{
+        width: 536px;
+        float: right;
+        padding: 245px 0;
+        text-align: left;
+        opacity: 1;
+        a{
+            font-size: fontSize(fontSize60);
+            color: primaryColor(blackColor);
+            line-height: 1.12;
+            letter-spacing: -0.87px;
+        }
+        @include smMax{
+            width: 100%;
+            text-align: center;
+            padding: 164px 0 60px;
+            a{
+                font-size: fontSize(fontSize42);
+            }
+        }
+        & span{
+            background: -webkit-linear-gradient(#65318f, #104082);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .main_about_us{
+        display: none;
+        @include smMax{
+            display: block;
+            text-align: center;
+            a{
+                display: inline-block;
+                font-size: fontSize(fontSize14);
+                font-family: fontFamily(gilroyBold);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                position: relative;
+                color: primaryColor(blackColor);
+                padding-right: 32px;
+                &::after{
+                    width: 22px;
+                    height: 10px;
+                    content: '';
+                    position: absolute;
+                    right:0;
+                    top: 5px;
+                    background: url(../../images/line-3.svg) no-repeat;
+                }
+            }
+        }
+    }
+}
+.main_message_content.updateedtext h2{
+    float: left;
+    padding-bottom: 65px;
+}
+.main_message_content.updateedtextsecond h2{
+    padding-top: 0;
+    & a{
+        padding-top: 0;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        color: #111111;
+        font-size: fontSize(fontSize50);
+        font-family: fontFamily(quartoLight);
+    }
+    @include smMax{
+        padding-bottom: 20px;
+    }
+    & .downArrow{
+        width: 22px;
+        height: 10px;
+        background: url(../../images/line-3.svg) no-repeat;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        display: block;
+        margin-top: 20px;
+        @include smMax{
+            margin: 20px auto 0;
+        }
+    }
+}
+
+.main_message_content{
+    width: 100%;
+    float: left;
+}

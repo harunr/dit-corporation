@@ -1,0 +1,233 @@
+.viewslidecon{
+    @include lgMax{
+        overflow: hidden;
+    }
+    @include smMax{
+        overflow: inherit;
+    }
+    @include smMax{
+        .viewslidecon_drag_con{
+            width: 100%!important;
+            left: 0!important;
+            height: auto!important;
+            position: inherit!important;
+            .viewslidecon_drag{
+                width: 100%!important;
+                left: inherit!important;
+            }
+        }
+    }
+}
+.drag_slide_content{
+    width: 100%;
+    padding: 120px 0 110px;
+    background: primaryColor(blackColor);
+    &.white-bg-drag{
+        background: primaryColor(whiteColor);
+        & h3{
+            color: primaryColor(blackColor);
+        }
+        & p{
+            color: primaryColor(blackColor);
+        }
+        & .domain_pro{
+            li{
+                a{
+                    color: primaryColor(blackColor);
+                    opacity: 0.8;
+                }
+            }
+        }
+        & .slick-dots{
+            li{
+                button{
+                    background: primaryColor(greyColor)!important;
+                }
+                &.slick-active{
+                    button{
+                        background: primaryColor(blackColor)!important;
+                    }
+                }
+            }
+        }
+        & .slick-arrow{
+            &.slick-prev{
+                background: url(../../images/slider-left-grey.png) no-repeat!important;
+                background-size: cover!important;
+            }
+            &.slick-next{
+                background: url(../../images/slider-right-grey.png) no-repeat!important;
+                background-size: cover!important;
+            }
+        }
+    }
+    &.single-tab{
+        padding: 118px 0 150px;
+        &.white-bg-drag{
+            background: primaryColor(whiteColor);
+            h3{
+                color: primaryColor(blackColor);
+            }
+            & .slick-dots{
+                li{
+                    button{
+                        background: primaryColor(greyColor)!important;
+                    }
+                    &.slick-active{
+                        button{
+                            background: primaryColor(blackColor)!important;
+                        }
+                    }
+                }
+            }
+            & .slick-arrow{
+                &.slick-prev{
+                    background: url(../../images/slider-left-grey.png) no-repeat;
+                    background-size: cover;
+                }
+                &.slick-next{
+                    background: url(../../images/slider-right-grey.png) no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+        h3{
+            padding-bottom: 60px;
+        }
+    }
+    @include smMax{
+        padding: 70px 0 195px;
+        &.single-tab{
+            padding: 70px 0 195px;
+        }
+    }
+    h3{
+        line-height: 1.2;
+        padding-bottom: 15px;
+        @include smMax{
+            font-size: fontSize(fontSize34);
+        }
+    }
+    p{
+        font-family: fontFamily(gilroyRegular);
+        font-size: 24px;
+        color: primaryColor(whiteColor);
+        margin-bottom: 20px;
+        @include smMax{
+            font-size: fontSize(fontSize18);
+        }
+        span{
+            font-family: fontFamily(gilroySemiBold);
+            line-height: 2.08;
+            border-bottom: 1px solid $secondaryColor;
+            padding-bottom: 2px;
+            cursor: pointer;
+        }
+    }
+    .domain_pro{
+        padding-top: 18px;
+    }
+    .drag_slide_con{
+        overflow: hidden;
+        position: relative;
+        left: 15px;
+        .slick-arrow{
+            position: absolute;
+            bottom: -110px;
+            text-indent: -9999px;
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            border: 0;
+            background: none;
+            &.slick-prev{
+                right: calc(50% + 15px);
+                background: url(../../images/slider-left.png) no-repeat;
+                background-size: cover;
+            }
+            &.slick-next{
+                right: calc(50% - 75px);
+                background: url(../../images/slider-right.svg) no-repeat;
+                background-size: cover;
+            }
+            &.slick-disabled{
+                opacity: 0.5;
+            }
+        }
+        @include smMax{
+            overflow: inherit;
+            width: 100%!important;
+            position: static;
+            left: 0;
+            .slick-dots{
+                display: flex;
+                margin-top: 50px;
+                li{
+                    flex-grow: 1;
+                    flex-basis: 0;
+                    height: 2px;
+                    button{
+                        width: 100%;
+                        text-indent: -999px;
+                        border: 0;
+                        height: 1px;
+                        background: #545454;
+                    }
+                    &.slick-active{
+                        button{
+                            background: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+        .drag_slide{
+            width: 648px;
+            height: 560px;
+            float: left;
+            margin-right: 130px;
+            position: relative;
+            @include smMax{
+                width: 100%;
+                height: 335px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            a{
+                display: block;
+                height: 100%;
+                @include smMax{
+                    height: 335px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .drag_slide_name{
+                    max-width: 100%;
+                    position: absolute;
+                    left: 50px;
+                    bottom: 40px;
+                    line-height: 1.24;
+                    font-size: fontSize(fontSize42);
+                    padding-right: 50px;
+                    @include smMax{
+                        display: none;
+                    }
+                }
+            }
+
+        }
+        }
+}
+body.summaryDetails{
+   & .drag_slide_content{
+       margin-top: -1px;
+    & .viewslidecon_drag_con{
+        background-color: #111111;
+        margin-top: 20px;
+    }
+}
+}

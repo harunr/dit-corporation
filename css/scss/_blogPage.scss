@@ -1,0 +1,227 @@
+// .blog-page {
+//   img {
+//     width: 100%;
+//     height: 100vh;
+//   }
+//   .image-container {
+//     width: 100%;
+//     height: 100vh;
+//     position: relative;
+//     .csr-image {
+//       width: 100%;
+//       height: 100vh;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: flex-end;
+//       position: relative;
+//       background-repeat: no-repeat;
+//       background-size: cover;
+//     }
+//   }
+
+//   .brief {
+//     h1 {
+//       margin: 100px 0 50px 0;
+//       font-size: fontSize(fontSize50);
+//       line-height: 1.24;
+//     }
+   
+//   }
+
+//   .brief-para{
+//     p {
+//       width: 648px;
+//       margin-bottom: 124px;
+//     }
+//   }
+
+//   .blog-detail-list {
+//     display: flex;
+//     justify-content: center;
+//     ul {
+//       margin-bottom: 104px;
+//     }
+//     ul li {
+//       display: grid;
+//       list-style: none;
+//       font-size: 24px;
+//       font-family: fontFamily(gilroyRegular);
+//       line-height: 1.67;
+//       margin-bottom: 30px;
+//       span {
+//         font-weight: bold;
+//       }
+//     }
+//   }
+
+//   .left-image {
+//     figure {
+//       width: 100%;
+//     }
+//     .text {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       p {
+//         width: 421px;
+//         line-height: 2.08;
+//       }
+//     }
+//   }
+
+//   .title1-section,
+//   .title2-section {
+//     margin-bottom: 100px;
+//     h3 {
+//       margin: 100px 0 27px 0;
+//       font-size: fontSize(fontSize34);
+//       line-height: 1.76;
+//       color: primaryColor(blackColor);
+//       @include smMax {
+//         margin: 70px 0 50px 0;
+//         font-size: fontSize(fontSize34);
+//         line-height: 1.29;
+//       }
+//     }
+
+//     p {
+//       width: 1096px;
+//     }
+//     ul {
+//       list-style: none;
+//       margin-bottom: 147px;
+//       @include smMax {
+//         margin-bottom: 60px;
+//       }
+//       li {
+//         display: flex;
+//         list-style-position: outside;
+//         font-family: fontFamily(gilroylight);
+//         font-size: fontSize(fontSize24);
+//         line-height: 2.08;
+//         color: primaryColor(greyColor);
+//         @include smMax {
+//           font-size: fontSize(fontSize18);
+//           line-height: 2;
+//           width: 100%;
+//         }
+//       }
+//     }
+
+//     ul li::before {
+//       content: "\2022";
+//       color: primaryColor(lighttealColor);
+//       display: inline-block;
+//       width: 1em;
+//     }
+//   }
+
+//   .para {
+//     margin-top: 99px;
+//     margin-bottom: 99px;
+//   }
+
+//   .blog-image{
+//     p{
+//       font-family: fonrFamily(gilroylight);
+//     font-size: fontSize(fontSize24);
+//     color: primaryColor(greyColor);
+//     line-height: 2.08;
+//     }
+//     .paragraph-section{
+//       margin-bottom: 0 !important;
+//     }
+//   }
+// }
+
+/**blog sidebar css start here**/
+.basic_content_auth_info{
+  padding: 103px 0 103px 0;
+  @include smMax {
+    padding: 70px 0;
+  }
+  h3{
+    margin-bottom: 46px;
+    line-height: 62px;
+    @include mdMinMax {
+      font-size: fontSize(fontSize36);
+      line-height:50px;
+    }
+    @include smMax {
+      line-height: 44px;
+    }
+  }
+  .pad35{
+    padding-left: 55px;
+    padding-right: 55px;
+    @include smMax {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+/**blog sidebar css start here**/
+
+/**sidebar tags css start here**/
+.sidebar_tags_wrap{
+  @include smMax {
+    margin-bottom: 30px;
+  }
+}
+.sidebar_tags_row{
+  margin-bottom:40px;
+  &:last-child{
+    margin-bottom: 0px;
+  }
+  @include smMax {
+    margin-bottom: 20px;
+  }
+   h4{
+       font-family: fontFamily(gilroyBold);
+       font-size: fontSize(fontSize24);
+       line-height:40px;
+       color: primaryColor(blackColor);
+       margin:0px;
+       @include smMax {
+        font-size: fontSize(fontSize18);
+          line-height:36px;
+       }
+   }
+   ul{
+     li{
+        font-family: fontFamily(gilroyRegular);
+       font-size: fontSize(fontSize24);
+       line-height:40px;
+       color: primaryColor(blackColor);
+       padding: 0;
+       margin: 0;
+         &:before{
+          display:none;
+         }
+         @include smMax {
+          font-size: fontSize(fontSize18);
+          line-height:36px;
+         }
+     }
+   }
+}
+/**sidebar tags css start here**/
+
+/**blog page text and image css start here**/
+.blog_page_text{
+   padding:110px 0 100px;
+   @include smMax {
+    padding:70px 0;
+   }
+   ul{
+     margin-bottom: 50px;
+   }
+}
+.blog_page_img.two-col-img-text{
+  .slide_text_con{
+    @include smMax {
+        margin-bottom: 0px;
+    }
+  }
+}
+/**blog page text and image css end here**/

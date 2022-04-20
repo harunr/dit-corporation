@@ -1,0 +1,197 @@
+/* LAYOUT STYLES JUST TO MAKE THIS CODEPEN TIDY */
+
+  
+  
+  /*
+   * DEPENDANCIES (IF USING TYPEAHEAD SELECTS):
+   * - Selectize (https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/css/selectize.css)
+   ----------------------------------------------------------------------- */
+  
+  /* COMPONENT STYLES START HERE */
+  .fp-form, .fp-form * {
+    box-sizing: border-box;
+  }
+  
+  .fp-form [type='text'], .fp-form [type='password'], .fp-form [type='date'], .fp-form [type='datetime'], .fp-form [type='datetime-local'], .fp-form [type='month'], .fp-form [type='week'], .fp-form [type='email'], .fp-form [type='number'], .fp-form [type='search'], .fp-form [type='tel'], .fp-form [type='time'], .fp-form [type='url'], .fp-form [type='color'], .fp-form textarea, .fp-form select {
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem;
+    padding: 0.375rem 0.55rem;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: 400ms;
+    outline: none;
+  }
+  
+//   .fp-form [type='text'], .fp-form [type='password'], .fp-form [type='date'], .fp-form [type='datetime'], .fp-form [type='datetime-local'], .fp-form [type='month'], .fp-form [type='week'], .fp-form [type='email'], .fp-form [type='number'], .fp-form [type='search'], .fp-form [type='tel'], .fp-form [type='time'], .fp-form [type='url'], .fp-form [type='color'], .fp-form select {
+//     height: 2rem;
+//   }
+  
+  .selectize-control {
+    margin-bottom: 1rem;
+  }
+  
+  .selectize-input {
+    display: block;
+  }
+  
+  .selectize-input, .selectize-input.focus {
+    padding: 0.375rem 0.55rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .selectize-input, .selectize-input input {
+    font-size: 0.9rem;
+    color: inherit;
+  }
+  
+  .fp-form .selectize-input [type='text'] {
+    height: auto;
+  }
+  
+  .fp-form [type='text']:focus, .fp-form [type='password']:focus, .fp-form [type='date']:focus, .fp-form [type='datetime']:focus, .fp-form [type='datetime-local']:focus, .fp-form [type='month']:focus, .fp-form [type='week']:focus, .fp-form [type='email']:focus, .fp-form [type='number']:focus, .fp-form [type='search']:focus, .fp-form [type='tel']:focus, .fp-form [type='time']:focus, .fp-form [type='url']:focus, .fp-form [type='color']:focus, .fp-form textarea:focus, .fp-form select:focus, .selectize-input.focus, .selectize-dropdown {
+    border-color: #aaa;
+  }
+  
+  /* FLOATING LABELS STYLES */
+  .fp-row {
+    position: relative;
+    margin: 18px 0 40px;
+  }
+  
+ .fp-floating-label {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    display: inline-block;
+    padding: 0 0.1rem;
+    line-height: 1;
+    background-color: none;
+    cursor: text;
+    transition: 400ms;
+    z-index: 999;
+    color: #8a8a8a;
+  }
+  
+ .fp-floating-label--select {
+    cursor: default;
+  }
+  
+  .fp-floating-label--focused, .fp-floating-label--valued {
+    font-size: 12px!important;
+    color: inherit;
+    transform: translateY(-300%);
+    margin-left: -30px;
+    text-transform: uppercase;
+    color: #7c7c7c!important;
+    font-family: fontFamily(gilroyMedium)!important;
+  }
+  
+  /* FORM EXPAND RELATED STYLES */
+  .fp-form {
+    position: relative;
+  }
+  
+  .fp-do-close {
+    display: none;
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  
+  .fp-form--expanded .fp-do-close, .fp-form--expanding .fp-do-close {
+    display: block;
+  }
+  
+ .fp-expand {
+    height: 0;
+    margin-top: -0.5rem;
+    overflow: hidden;
+    transition: all 500ms cubic-bezier(0.23,1,0.32,1);
+  }
+  
+  .fp-expand__inner {
+    padding-top: 0.5rem;
+  }
+  
+ .fp-form--expanded .fp-expand {
+    overflow: visible;
+  }
+
+  .fp-form select{
+    width: 100%;
+    padding: 5px 24px 14px !important;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: "gilroylight";
+    color: #949494;
+    font-weight: 300;
+    border: 0px;
+    border-bottom: 1px solid #ffffff;
+    resize: none;
+    border-radius: 0px;
+    box-shadow: none!important;
+    background: none !important;
+  }
+  .fp-form .fp-floating-label--select{
+    color: #9e9e9e;
+    font-size: 24px;
+    font-family: "gilroylight";
+    font-weight: 300;
+    pointer-events: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: calc(100% - 50px);
+    padding-left: 12px;
+    @include smMax{
+        font-size: 18px;
+        font-family: "gilroyregular";
+    }
+  }
+  .fp-form select{
+     appearance: none;
+     background: url(../../images/dropdown.svg) no-repeat!important; 
+     background-position: top 18px right 15px!important;
+  }
+  .fp-form select option{
+    font-size: 16px;
+    color: primaryColor(whiteColor)!important;
+    border: 0;
+    background: primaryColor(blackColor)!important;
+  }
+  .fp-form .fp-floating-label--select.fp-floating-label--valued + select{
+    border-bottom-color: #90e4bb;
+    color: #ffffff;
+  }
+  .fp-form .fp-floating-label--select.fp-floating-label--valued + select option{
+    font-size: 16px;
+    color: #000;
+    border: 0;
+  }
+  .fp-form{
+    & .fp-floating-label--select{
+        &::before{
+            content: "*";
+            color: #9e9e9e;
+            padding-left: 0px;
+            font-size: 24px;
+            padding-right: 2px;
+        }
+        &.fp-floating-label--focused{
+            &::before{
+                font-size: 12px;
+            }
+        }
+        &.fp-floating-label--valued{
+            &::before{
+                font-size: 12px;
+            }
+        }
+    }
+  }

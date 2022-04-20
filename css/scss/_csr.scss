@@ -1,0 +1,233 @@
+/**csr page css start here**/
+.csr-page-left{
+  padding-right: 112px;
+  @include mdMax {
+       padding-right: 15px;
+  }
+}
+.csr-page-right{
+  .contact_form{
+    padding-top:50px;
+    padding-bottom: 74px;
+    top:45px;
+    
+    @include mdMax {
+      padding-top:56px;
+      padding-bottom: 56px;
+      .common_cta{
+        .common_cta_inner{
+          border: 0px;
+          width:auto;
+          height: auto;
+          width: 100%;
+          display: block;   
+          .cmn_link{
+                padding: 16px 15px;
+                background: primaryColor(lighttealColor);
+                border-color: primaryColor(lighttealColor);
+                border-radius: 36px;
+                text-transform: uppercase;
+                max-width: 360px;
+                margin: 0 auto;
+            span{
+                position: static;
+                font-size: fontSize(fontSize14);
+                line-height: 19px;
+                letter-spacing: 1px;
+                color: #FFF;
+                display: block;
+                height: auto;
+                font-family: fontFamily(gilroyBold);
+              &:after{
+                display: none;
+              }
+              
+            }
+            &:hover{
+              background: #77d1a5;
+              border-color: #77d1a5;
+            }
+          }
+        }
+      }
+    }
+    @include col{
+      .common_cta{
+        .common_cta_inner{
+          .cmn_link{
+             max-width: 280px;
+          }
+        }
+      }
+    }
+    .form-group.input-material{
+      margin-bottom: 20px;
+      @include mdMax {
+        margin-bottom: 30px;
+      }
+      textarea{
+        height: 123px;
+        @include mdMax {
+          height: 110px;
+        }
+      }
+    }
+    .common_cta{
+      margin-top:30px;
+    }
+  }
+  h3{
+    color: primaryColor(blackColor);
+    margin-bottom: 23px;
+    font-size: 34px;
+    line-height: 60px;
+    @include mdMax {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+.basic_content_img{
+  height: 547px;
+    .figure-wrap{
+      position: absolute;
+      left: 0;
+      height: 547px;
+      width: calc(50% + 77px);
+      overflow: hidden;
+      @include mdMax {
+       width:100%;
+       height:450px;
+       }
+       @include smMax {
+        height:328px;
+      } 
+      .imgObjectfit{
+        height: 100%;
+      }
+    }
+    @include mdMax {
+      width:100%;
+      height:450px;
+    }
+    @include smMax {
+      height:328px;
+    }  
+}
+.csr-page{
+  .basic_content{
+     margin:104px 0 135px;
+     @include mdMax {
+           margin: 70px 0;
+     }
+  }
+  .blog_page_text{
+    padding:110px 0 100px;
+    @include mdMax {
+      padding: 70px 0;
+    }
+    ul{
+      margin-bottom: 0px;
+    }
+    h4{
+      line-height: 60px;
+      margin-bottom: 50px;
+      @include mdMax {
+        line-height: 1.2;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .who_we_are_hero{
+    padding-top: 116px;
+    padding-bottom: 116px;
+    height: auto!important;
+    align-items: flex-start!important;
+    @include mdMax {
+      padding: 0px 0;
+    }
+    h1{
+      padding-bottom: 63px;
+      max-width: 496px;
+      margin: 0 auto;
+      @include mdMax {
+        padding-bottom: 76px;
+      }
+      @include smMax {
+        max-width: 339px;
+      }
+    }
+    .num_box{
+      
+      .num,.count{
+        line-height: 100px;
+        @include mdMax {
+          font-size: 70px!important;
+          line-height: 70px;
+        }
+      }
+      .num_text{
+        margin-top:12px;
+        @include mdMax {
+          margin-top:5px;
+        }
+      }
+      &:nth-child(2),&:first-child{
+        margin-bottom: 50px;
+        
+      }
+      &:nth-child(2),&:last-child{
+        padding-right: 15px;
+        
+      }
+      @include mdMax {
+        margin-bottom: 57px;
+        &:nth-child(2),&:first-child{
+          margin-bottom: 57px;
+        }
+       
+      }
+    }
+  }
+}
+
+/**csr btn**/
+.fixed-csr-btn{
+  position: fixed;
+  background: primaryColor(whiteColor);
+  padding: 20px 27px;
+  bottom: 0px;
+  width: 100%;
+    z-index: 99;
+    display: none;
+  span.buttonPrimary{
+    text-align: center;
+    cursor: pointer;
+    max-width: 360px;
+    font-family: fontFamily(gilroyBold);
+    margin: 0 auto;
+    width: 100%;
+      display: block;
+    @include col{
+      max-width: 280px;
+    }
+  }
+  @include mdMax{
+    display: block;
+  }
+  &.fadeOut {
+    z-index: -9;
+  }
+  
+}
+.csr-banner{
+  @include mdMax{
+    &.banner_img{
+      height: calc(100vh - 90px);
+      figure{
+        height: calc(100vh - 90px);
+      }
+    }
+  }
+
+}

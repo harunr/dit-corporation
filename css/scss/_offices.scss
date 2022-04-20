@@ -1,0 +1,133 @@
+.image_slider_con{
+  overflow: hidden;
+  .image_slider{
+    width: 100%;
+    height: 100vh;
+    .image_slide{
+      position: relative;
+      img{      
+        width: 100%;
+        height: 100vh!important;
+        object-fit: cover;}
+    }
+    .image_slide_text{
+      width: 1140px;
+      height: 100px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: -50px auto 0;
+      z-index: 999;
+      text-align: center;
+      font-family: fontFamily(quartoRegular);
+      font-size: fontSize(fontSize80);
+      color: primaryColor(whiteColor);
+      @include lgMax{
+        width: 100%;
+      }
+      @include smMax{
+        height: auto;
+        padding: 0 15px;
+        font-size: fontSize(fontSize50);
+      }
+    }
+  }
+}
+
+
+// .offices-section {
+//   width: 100%;
+//   height: 100vh;
+//   .slide {
+//     position: relative;
+//     .slide-img {
+//       overflow: hidden;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         opacity: 1 !important;
+//         animation-duration: 3s;
+//         transition: all 1s ease;
+//       }
+//     }
+//     .slide-content {
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//       &--text {
+//         text-align: center;
+//         color: primaryColor(whiteColor);
+//         p {
+//           width: 421px;
+//           font-family: fontFamily(quartoRegular);
+//           font-size: fontSize(fontSize80);
+//           @include smMax {
+//             width: 360px;
+//             font-size: fontSize(fontSize50);
+//           }
+//         }
+//         .animated {
+//           transition: all 0.5s ease;
+//         }
+//       }
+//     }
+//   }
+
+//   .slick-dots {
+//     position: absolute;
+//     bottom: 25px;
+//     text-align: center;
+//     width: 100%;
+//     li {
+//       display: inline-block;
+//       margin: 0 5px;
+//       cursor: pointer;
+//       button {
+//         border: 0;
+//         display: block;
+//         font-size: 0px;
+//         color: transparent;
+//         cursor: pointer;
+//         transition: all 0.3s ease;
+//         &:hover,
+//         &:focus {
+//           outline: none;
+//         }
+//       }
+//     }
+//   }
+
+//   .stick-dots {
+//     .slick-dots {
+//       li {
+//         height: 3px;
+//         width: 10px;
+//         button {
+//           opacity: 0.25;
+//           height: 16px;
+//           width: 16px;
+//           border-radius: 50%;
+//           &:hover,
+//           &:focus {
+//             opacity: 1;
+//           }
+//           @include smMax {
+//             height: 10px;
+//             width: 10px;
+//           }
+//         }
+//         &.slick-active button {
+//           color: primaryColor(whiteColor);
+//           opacity: 0.75;
+//           &:hover,
+//           &:focus {
+//             opacity: 1;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,436 @@
+.section-heading{
+    margin-bottom: 70px;
+    padding-bottom: 37px;
+    position: relative;
+    font-size: fontSize(fontSize68);
+    line-height: 68px;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: primaryColor(lighttealColor);
+        height: 2px;
+        width:125px;
+    }
+}
+.sub-heading{
+    color: primaryColor(blackColor);
+    font-family: fontFamily(gilroySemiBold);
+    font-size: fontSize(fontSize18);
+    letter-spacing: 1.13px;
+    line-height: 26px   ;
+    text-transform: uppercase;
+    margin-top:20px;
+}
+.sub-brands{
+    padding: 100px 0 100px;
+    @include smMax {
+        padding: 70px 0 70px;
+    }
+    .banner-box{
+        padding: 62px 90px;
+        @include mdMinMax {
+            padding: 12px 10px;
+        }
+        &.light-bg{
+            background: #fff;
+            border: 0.5px solid #9e9e9e;
+        }
+        &.dark-bg{
+            background: linear-gradient(to left, #104082, #65318f 0%);
+        }
+        
+        &.all-black{
+            background: #fff;
+            border: 0.5px solid #9e9e9e;
+        }
+        &.all-white{
+            background: #000;
+        }
+    }
+    
+    ul{
+        margin-bottom: 12px;
+        li{
+            margin-bottom: 58px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .common_cta{
+        margin-top: 71px;
+    }
+}
+
+.incorrect-use{
+    padding: 100px 0 58px;
+    @include smMax {
+        padding: 70px 0 70px;
+    }
+    .logo-box{
+        max-width: 425px;
+        display: inline-block;
+    }
+    p{
+        color: primaryColor(blackColor);
+        font-family: fontFamily(gilroyRegular);
+        font-size: fontSize(fontSize18);
+        line-height: 27px;
+        margin-bottom: 65px;
+        font-style: italic;
+    }
+    ul{
+        li{
+            margin-bottom: 44px;
+            @include smMax {
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    .sub-heading{
+        text-align: left;
+    }
+}
+.clear-space{
+    padding-bottom: 0px;
+    p{
+        max-width: 425px;
+        margin-bottom: 28px;
+    }
+    ul{
+        li{
+            &:last-child{
+                margin-bottom: 0px;
+            }
+           
+        }
+    }
+    .order2{
+        @include smMax {
+            -ms-flex-order: 2;
+             order: 2;
+        }
+    }
+    .order3{
+        @include smMax {
+            -ms-flex-order: 3;
+            order: 3;
+        }
+    }
+    .order4{
+        @include smMax {
+            -ms-flex-order: 4;
+            order: 4;
+        }
+    }
+}
+
+.logo-style{
+    padding-bottom: 0;
+    @include smMax {
+        padding-bottom: 12px;
+    }
+    h3{
+        color: primaryColor(blackColor);
+       
+    }
+    .banner-box{
+        max-width: 425px;
+        padding: 47px 49px;
+    }
+    .section-heading{
+        margin-bottom: 40px;
+    }
+    ul{
+        margin-bottom: 0px;
+        
+    }
+    .logo-waterMark{
+        li{
+            @include smMax {
+               &:nth-last-child(2){
+                   margin-bottom: 0;
+               }
+            }
+        }
+    }
+    
+}
+
+.logo-water-mark{
+    position: relative;
+    margin-bottom: 50px;
+    h2{
+        color: primaryColor(lbrown);
+        font-family: fontFamily(gilroyBold);
+        font-size: fontSize(fontSize112);
+        line-height: normal;
+        opacity: 0.15;
+        margin-left: -24px;
+        @include smMax {
+            margin-left: 0px;
+        }
+    }
+    h3{
+        position: absolute;
+        bottom: 15px;
+        left: 0px;
+        @include smMax {
+            left: 24px;
+        }
+    }
+}
+.logo-waterMark{
+    .banner-box{
+        max-width: 225px;
+        padding: 74px 74px;
+        display: inline-block;
+       
+    }
+    
+}
+
+/**brand top section**/
+.brand-top-section{
+    padding-top: 100px;
+    @include smMax {
+       padding-top: 53px;
+    }
+    
+}
+.brand-two-col{
+    &.two-col-img-text{
+        .slide_text_con{
+            h3{
+                max-width: 100%;
+            }
+        }
+    }
+}
+.maxwidthFull{
+    max-width: 100%!important;
+}
+.summary_content_main.branding-summary{
+    height: auto;
+    padding:205px 0;
+    @include smMin{
+
+        .fixed_height{
+            height: 480px;
+        }
+    }
+    
+    @include mdMinMax{
+        padding:50px 0 100px;
+       .summary_content_main_content,&.rightImg{
+         padding-right:0px!important;
+         padding-left:0px!important;
+       }
+       .fixed_height{
+           height: auto;
+       }
+     
+    }
+    @include smMax {
+        padding:0px 0 0;
+        &:first-child{
+            padding-top:70px;
+        }
+        &.email-sign{
+            padding-top:70px!important;
+        }
+    }
+}
+
+.basic_content.basic_content-branding{
+   padding:268px 0;
+   margin:0;
+   @include smMax {
+    padding:70px 0;
+    margin:0;
+ }
+}
+
+.two-col-img-text{
+    p{
+        a{
+            color: primaryColor(lighttealColor);
+            font-family: fontFamily(gilroySemiBold);
+            text-decoration: underline;
+        }
+    }
+    &.brand-img-text{
+        .slide_text_con{
+            h3{
+                font-family: fontFamily(quartoLight);
+                text-transform: uppercase;
+                margin-bottom: 56px;
+            }
+            p{
+                font-size: fontSize(fontSize30);
+                @include smMax {
+                    font-size: fontSize(fontSize18);
+                }
+            }
+        }
+        
+    }
+}
+
+.md-container{
+    max-width: 872px;
+    margin:0 auto;
+}
+.filter-settings{
+    padding: 81px 0;
+    @include smMax {
+        padding: 70px 0;
+    }
+    .filter-settings-color{
+        div{
+            max-width: 424px;
+        }
+        .gradient-color{
+            background-image: linear-gradient(to right, #65318f 0%, #104082 100%);
+            max-width:424px;
+            height: 226px;
+
+            width:100%;
+        }
+        li{
+            margin-bottom: 60px;
+            &:last-child{
+                @include mdMin {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    ol{
+        li{
+            &:last-child{
+                
+                margin-bottom: 0;
+               
+            }
+        }
+    }
+    .filter-settings-right{
+        @include smMax {
+            padding-left: 15px!important;
+        }
+    }
+    
+}
+.pl-22{
+    padding-left: 116px;
+    @include mdMinMax {
+        padding-left: 20px;
+    }
+    
+    @include smMax {
+        padding-left: 15px;
+    }
+}
+.pr-22{
+    padding-right: 116px;
+    @include mdMinMax {
+        padding-right: 20px;
+    }
+    @include smMax {
+        padding-right: 15px;
+    }
+}
+
+.color-block{
+    
+    .color{
+      
+        height: 115px;
+        &.blue-color{
+           background: #134285;
+        }
+        &.purple-color{
+           background: #65318f;
+        }
+        &.black-color{
+          background: #111111;
+        }
+        &.grey-color{
+          background: #9e9e9e;
+        }
+        &.teal-color{
+            background: #90e4bb;
+        }
+        &.gradient-color{
+            background-image: linear-gradient(to left, #104082, #65318f 0%);
+        }
+        
+    }
+    .subhead{
+        margin-top:11px;
+        span{
+            color: primaryColor(blackColor);
+            font-family: fontFamily(gilroySemiBold);
+            font-size: fontSize(fontSize18);
+            line-height: 26px;
+            letter-spacing: 1.13px;
+            text-transform: uppercase;
+            
+            @include mdMinMax {
+                font-size: fontSize(fontSize14);
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.color-section-block{
+    .logo-water-mark{
+        margin-bottom: 28px;
+    }
+    p{
+        
+            color: #111111;
+            font-family: "gilroyregular";
+            font-size: 18px;
+            line-height: 27px;
+            margin-bottom: 47px;
+            font-style: italic;
+        
+    }
+    ul{
+        li{
+            margin-bottom: 70px;
+            &.pr-40{
+                padding-right: 40px;
+                @include smMax {
+                    padding-right: 15px;
+                }
+            }
+            @include smMax {
+
+                margin-bottom: 40px!important;
+            }
+        }
+    }
+}
+
+/**home page case study client css start **/
+.ourlient-mbhead{
+    color: primaryColor(blackColor);
+    font-size: fontSize(fontSize34);
+    line-height: 44px;
+    padding-left: 27px;
+    padding-right: 27px;
+    margin-bottom: 50px;
+    margin-top:60px;
+    display: none;
+    @include smMax {
+        display: block;
+    }
+}

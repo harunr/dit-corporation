@@ -1,0 +1,40 @@
+.thank_you_hero{
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: primaryColor(blackColor);
+    p{
+        font-size: fontSize(fontSize24);
+        font-family: fontFamily(gilroylight);
+        line-height: 2.08;
+        padding: 60px 0 60px 0;
+        color: primaryColor(whiteColor);
+        @include smMax{
+            font-size: fontSize(fontSize18);
+            line-height: 36px;
+            padding: 40px 0 40px 0;
+        }
+    }
+    h3{
+        font-size: fontSize(fontSize60);
+        font-family: fontFamily(quartoRegular);
+        line-height: 1.2;
+        color: primaryColor(whiteColor);
+        margin-top: 75px;
+        @include smMax{
+            font-size: fontSize(fontSize34);
+            line-height: 44px;
+        }
+    }
+}
+
+.career-thank-you-space{
+    margin-top: 139px;
+    @include smMax{
+        margin-top: 120px;
+    }
+}

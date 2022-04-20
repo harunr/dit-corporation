@@ -1,0 +1,230 @@
+.custom-content {
+  margin: 208px 0;
+  @include smMax{
+    margin: 70px 0;
+    h3{
+      text-align: left !important;
+    }
+  }
+}
+
+// commenting as discussed
+// .goal-setting-section {
+//   padding-bottom: 232px;
+//   @include smMax {
+//     padding-bottom: 191px;
+//   }
+//   h3 {
+//     font-size: fontSize(fontSize50);
+//     line-height: 1.2;
+//     font-family: fontFamily(quartoRegular);
+//     padding-bottom: 60px;
+//     padding-top: 232px;
+//     color: primaryColor(blackColor);
+//     @include smMax {
+//       font-size: fontSize(fontSize34);
+//       line-height: 1.29;
+//       padding-bottom: 50px;
+//       padding-top: 191px;
+//     }
+//   }
+//   p {
+//     font-family: fontFamily(gilroylight);
+//     font-size: fontSize(fontSize30);
+//     color: primaryColor(blackColor);
+//     line-height: 1.53;
+//     padding-bottom: 50px;
+//     display: flex;
+//     @include smMax {
+//       font-size: fontSize(fontSize22);
+//       line-height: 1.45;
+//       padding-bottom: 40px;
+//     }
+//     .number {
+//       padding-top: 9px;
+//       font-family: fontFamily(gilroySemiBold);
+//       font-size: fontSize(fontSize18);
+//       letter-spacing: 3px;
+//       color: primaryColor(blackColor);
+//       margin-right: 17px;
+//       @include smMax {
+//         font-size: fontSize(fontSize16);
+//         letter-spacing: 2.67px;
+//         margin-right: 14px;
+//         padding-top: 5px;
+//       }
+//     }
+
+//     .dash {
+//       color: primaryColor(lighttealColor);
+//       margin-right: 22px;
+//       @include smMax {
+//         margin-right: 14px;
+//       }
+//     }
+
+//     div {
+//       width: 448px;
+//       @include smMax {
+//         width: 285px;
+//       }
+//     }
+
+//     .award-name {
+//       width: 200px;
+//       padding-top: 10px;
+//       font-family: fontFamily(gilroyRegular);
+//       font-size: fontSize(fontSize24);
+//       line-height: 1.54;
+//       color: primaryColor(greyColor);
+//       margin-left: 25px;
+//       @include smMax {
+//         padding-top: 0;
+//         font-size: fontSize(fontSize18);
+//         width: 170px;
+//       }
+//     }
+//   }
+// }
+
+// .project-image {
+//   p {
+//     font-family: fontFamily(gilroylight) !important;
+//     font-size: fontSize(fontSize24) !important;
+//     line-height: 2.08 !important;
+//   }
+// }
+
+.next-project-section {
+  @include smMax {
+    display: none !important;
+  }
+  padding-top: 125px;
+  padding-bottom: 124px;
+  p {
+    font-family: fontFamily(quartoRegular) !important;
+    font-size: fontSize(fontSize50) !important;
+    line-height: 1.2 !important;
+    padding-bottom: 40px !important;
+    height: 97px;
+    @include mdMinMax {
+      font-size: fontSize(fontSize40) !important;
+      height: 130px;
+    }
+  }
+  a {
+    font-family: fontFamily(quartoLight) !important;
+    font-size: fontSize(fontSize60) !important;
+    line-height: 1 !important;
+    color: primaryColor(blackColor);
+    @include mdMinMax {
+      font-size: fontSize(fontSize48) !important;
+      height: 110px;
+    }
+  }
+
+  .m-right {
+    margin-right: 30px;
+  }
+
+  .vertical-left {
+    border-left: 1px solid primaryColor(greyColor);
+  }
+  .p-left {
+    padding-left: 122px;
+    @include mdMinMax {
+      padding-left: 70px;
+    }
+  }
+}
+
+.next-project-section-mobile {
+  display: none;
+  @include smMax {
+    display: flex;
+  }
+
+  .prev-project{
+      width: 30px;
+      height: 10px;
+      float: left;
+      margin: 150px 0px 0px 0;
+    background: url(../../images/icon-arrow-black.png) no-repeat;
+  }
+  .next-project{
+    width: 30px;
+    height: 10px;
+    transform: rotate(180deg);
+    margin: 150px 10px 0px 0;
+    float: right;
+    background: url(../../images/icon-arrow-black.png) no-repeat;
+  }
+  .other-projects {
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    h3 {
+      //width: 230px;
+      text-align: center;
+      font-family: fontFamily(quartoRegular);
+      font-size: fontSize(fontSize34);
+      color: primaryColor(blackColor);
+      line-height: 1.29;
+      padding-bottom: 50px;
+    }
+    h4 {
+      text-align: center;
+      font-family: fontFamily(quartoLight);
+      font-size: fontSize(fontSize34);
+      color: primaryColor(blackColor);
+      line-height: 1.24;
+    }
+  }
+}
+
+// commenting as discussed
+// .vertical-slide {
+//   height: 960px;
+//   background-color: black;
+//   display: flex;
+//   align-items: center;
+//   .fixed {
+//     h3 {
+//       width: 312px;
+//       font-size: fontSize(fontSize60);
+//       font-family: fontFamily(quartoRegular);
+//       color: white;
+//       @include smMax {
+//         width: 249px;
+//         font-size: fontSize(fontSize34);
+//       }
+//     }
+//     p {
+//       width: 312px;
+//       padding-top: 60px;
+//       font-size: fontSize(fontSize24);
+//       font-family: fontFamily(gilroyRegular);
+//       color: primaryColor(whiteColor);
+//       @include smMax {
+//         width: 360px;
+//         padding-top: 50px;
+//         font-size: fontSize(fontSize18);
+//         padding-bottom: 150px;
+//       }
+//     }
+//   }
+
+//   .scrollable {
+//     @include smMax {
+//       height: 438px;
+//     }
+//     p {
+//       font-size: fontSize(fontSize50);
+//       font-family: fontFamily(gilroyThin);
+//       color: primaryColor(whiteColor);
+//       @include smMax {
+//         font-size: fontSize(fontSize34);
+//       }
+//     }
+//   }
+// }

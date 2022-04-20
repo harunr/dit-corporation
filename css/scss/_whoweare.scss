@@ -1,0 +1,208 @@
+@mixin shaft {
+  width: 10px;
+  background-color: primaryColor(blackColor);
+}
+
+@mixin shaftHover {
+  width: 20px;
+  transition-delay: 0.3s;
+  background-color: primaryColor(whiteColor);
+
+  &:before,
+  &:after {
+    width: 2px;
+    transition-delay: 0.3s;
+    top: 50%;
+    left: 100%;
+    margin-top: -3px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent transparent transparent primaryColor(whiteColor);
+  }
+}
+
+@mixin shaftPosition {
+  position: absolute;
+  top: 60%;
+}
+
+.who_we_are_hero {
+  @include smMax {
+    -ms-flex-align: start !important;
+    align-items: flex-start !important;
+    
+  }
+  @include col{
+    height: auto!important;
+    padding-bottom: 50px;
+  }
+  .inner_hero_container {
+    @include smMax {
+      padding-top: 120px;
+    }
+    h1 {
+      font-size: fontSize(fontSize50);
+      @include smMax {
+        font-size: fontSize(fontSize34);
+      }
+    }
+    .w-w-r-list {
+      .num_box {
+        padding-right:35px;
+        .num {
+          font-size: fontSize(fontSize100);
+          color: primaryColor(lighttealColor);
+          @include smMax {
+            font-size: fontSize(fontSize50);
+          }
+        }
+        .num_text {
+          font-size: fontSize(fontSize24);
+          color: primaryColor(lgreyColor);
+          word-break: break-word;
+          @include smMax {
+            font-size: fontSize(fontSize18);
+          }
+        }    
+        &:last-child{
+          padding-right:0px;
+        }
+        @include smMax {
+          padding-bottom: 30px;
+          padding-right:15px;
+          &:last-child{
+           padding-right:15px;
+          }
+        } 
+      }
+    }
+  }
+}
+
+.explore-ss {
+  padding: 100px 0;
+  background-color: primaryColor(blackColor);
+  h1 {
+    margin-bottom: 5%;
+    font-size: fontSize(fontSize50);
+    color: primaryColor(whiteColor);
+    @include smMax {
+      font-size: fontSize(fontSize34);
+      margin-bottom: 10%;
+    }
+  }
+
+  .service_list {
+    .service_text {
+      margin: 1%;
+      font-size: fontSize(fontSize48);
+      a {
+        display: inline-flex;
+        align-items: center;
+        color: primaryColor(lgreyColor);
+        font-family: fontFamily(gilroyThin);
+        &:hover {
+          color: primaryColor(whiteColor);
+          font-family: fontFamily(gilroyRegular);
+          .arrow {
+            opacity: 1;
+            margin-left: 30px;
+            margin-right: -30px;
+          }
+        }
+      }
+      @include smMax {
+        font-size: fontSize(fontSize30);
+        margin: 3%;
+      }
+    }
+    .service_text:hover,
+    .service_text:active {
+      font-size: fontSize(fontSize48);
+      color: primaryColor(whiteColor);
+      font-family: fontFamily(gilroyRegular);
+      @include smMax {
+        font-size: fontSize(fontSize30);
+        font-family: fontFamily(gilroyRegular);
+      }
+    }
+    .arrow {
+      margin-left: 0;
+      opacity: 0;
+      transition: 0.5s;
+      width: 35px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .line {
+      width: 30px;
+      background: #fff;
+      height: 1px;
+      float: left;
+    }
+    .point {
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 10px solid #fff;
+      float: right;
+      margin-top: -5px;
+    }
+  }
+}
+
+.awardsSection {
+  padding: 90px 0;
+  overflow: hidden;
+  background-color: primaryColor(blackColor);
+  .awards {
+    font-family: fontFamily(quartoRegular);
+    font-size: fontSize(fontSize50);
+    color: primaryColor(whiteColor);
+  }
+  .awards {
+    max-width: 200px;
+  }
+  .w3 {
+    max-width: 184px;
+    display: inline-block;
+  }
+  .awwwards {
+    max-width: 134px;
+    display: inline-block;
+  }
+  .communicator {
+    max-width: 183px;
+    display: inline-block;
+  }
+  @include smMax {
+    .mob--sm {
+      min-height: 120px;
+    }
+  }
+}
+
+.next-slide {
+  width: 50px;
+  height: 10px;
+  background: url(../../images/arrow-black.png) no-repeat;
+  opacity: 1;
+  margin-top: 10%;
+  margin-left: 35%;
+  display: block;
+}
+
+.prev-slide {
+  width: 50px;
+  height: 10px;
+  background: url(../../images/arrow-black.png) no-repeat;
+  transform: rotate(180deg);
+  opacity: 1;
+  margin-top: 10%;
+  margin-left: -35%;
+  display: block;
+}
+ .activeHeader{
+   border-bottom: 2px solid primaryColor(lighttealColor) !important;
+ }

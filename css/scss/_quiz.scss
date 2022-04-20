@@ -1,0 +1,210 @@
+.quiz{
+    padding: 100px 0;
+   .question{
+       font-size: fontSize(fontSize80);
+       font-family: fontFamily(quartoRegular);
+       line-height: 76px;
+       & .buttonPrimary{
+           margin-top: 60px;
+           text-align: center;
+           &.disnone{
+               display: none;
+           }
+       }
+       @include mdMinMax {
+        font-size: fontSize(fontSize50);
+        line-height: 60px;
+       }
+       @include smMax{
+           font-size: fontSize(fontSize50);
+           line-height: 52px;
+           max-width: 306px;
+           margin-bottom: 50px;
+       }
+   }
+   @include smMax{
+       .align-items-center{
+           // min-height: inherit!important;
+           align-items: inherit!important;
+           display: block!important;
+       }
+   }
+   .auto--height-anm{
+       height: 100%;
+    //    margin-top: -10%;
+    //    transform: translateY(50%);
+       @include smMax{
+        margin-top: 0;
+        height: auto;
+        transform: none;
+    }
+   }
+   .option,.option_content{
+       font-size: fontSize(fontSize24);
+       color: primaryColor(greyColor);
+       margin-bottom: 10px;
+       .list_style{
+           color: primaryColor(blackColor);
+           @include smMax{
+            font-family: fontFamily(gilroyBold);
+            font-size: fontSize(fontSize24);
+           }
+       }
+       strong{
+           color: primaryColor(blackColor);
+           font-family: fontFamily(gilroyBold);
+           @include smMax{
+            font-size: fontSize(fontSize24);
+           }
+       }
+       &.active{
+           .list_style{
+               &:after{
+                   opacity: 1;
+               }
+           }
+       }
+       .list_style{  
+           position: relative;
+           &:after {
+               opacity: 0;
+               transition: .5s;
+               content: "";
+               position: absolute;
+               left: -25px;
+               top: 0;
+               border-radius: 50%;
+               width: 64px;
+               height: 29px;
+               transform: rotate(-34deg);
+               border: solid 4px #90e4bb;
+             }
+       }
+      
+   }
+}
+
+.option-group{
+   @include smMax{
+       .item-anm-click{
+        padding: 0 57px;
+        max-width: 275px;
+   }
+}
+}
+.option_content{
+    max-height: 0;
+    position: relative;
+    top: 0;
+    transform: translateY(0%);
+    transition: 1s;
+    opacity: 0;
+    
+    .list_style{
+        font-family: fontFamily(gilroyBold);
+    }
+    p{
+        display: inline;
+        font-size: fontSize(fontSize24);
+        color: primaryColor(greyColor); 
+        line-height: 50px;
+        @include smMax{
+         font-size: fontSize(fontSize18);
+         line-height: 36px;
+        }
+    }
+    .buttonPrimary{
+        font-size: fontSize(fontSize20);
+        color: primaryColor(whiteColor); 
+        background-color: primaryColor(lighttealColor); 
+        border-radius: 35px;
+        width: 305px;
+        height: 66px;
+        padding: 18px;
+        box-sizing: border-box;
+        text-align: center;
+        display: inline-block;
+        margin-top: 35px;
+        font-family: fontFamily(gilroySemiBold);
+    }
+    @include smMax{
+        transform: translateY(50%);
+    }
+}
+.option-wrap.active .option_content{
+    display: block;
+    position: relative;
+    top: 50%;
+    animation: retransformup 2s both;
+    -webkit-animation: retransformup 2s both;
+    -moz-animation: retransformup 2s both;
+    -o-animation: retransformup 2s both;
+    -ms-animation: retransformup 2s both;
+    max-height: 100%;
+    opacity: 1;
+    .list_style{
+        &:after{
+            opacity: 1;
+        }
+    }
+    .btnDestop{
+        display: block;
+    }
+    .btnResponsive{
+        display: none;
+    }
+    @include smMax{
+        animation: retransformup 1s both;
+        -webkit-animation: retransformup 1s both;
+        -moz-animation: retransformup 1s both;
+        -o-animation: retransformup 1s both;
+        -ms-animation: retransformup 1s both;
+        .btnDestop{
+            display: block;
+        }
+        .btnResponsive{
+            display: inline-block;
+            line-height: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 50px;
+    display: none;
+        }
+        .quizbtm-wrap{
+            text-align: center;
+        }
+    }
+}
+.option-group.optionActive .item-anm-click{
+    opacity: 0;
+    z-index: -9;
+    height: 0;
+    overflow: hidden;
+    margin:0px;
+}
+strong.animated.fadeIn{
+    animation-delay: 1.5s;
+}
+span.anmiContent.fadeIn{
+    animation-delay: 2s;
+}
+
+.quizbtm-wrap.fadeIn{
+    animation-delay: 2.5s;
+}
+.item-anm-click{
+    p{
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 32px);
+        @include smMax{
+            width: calc(100% - 44px);
+            margin-left:10px;
+        }
+    }
+    &.activeCircle{
+        .list_style:after{
+            opacity: 1!important;
+           }
+    }
+}

@@ -1,0 +1,42 @@
+.awards_press{
+    padding: 290px 0;
+    @include smMax{
+        padding: 244px 0;
+    }
+    .awards_inner{
+        width: 430px;
+        float: right;
+        @include smMax{
+           width: 100%;
+           float: none;
+        }
+        h3{
+            color: primaryColor(blackColor); 
+            line-height: 1.2;
+            @include smMax{
+                font-size: fontSize(fontSize34);
+            }
+        }
+        ul{
+            margin-top: 60px;
+            @include smMax{
+                display: flex;
+                align-items: center;
+            }
+            li{
+                &:first-child{
+                    margin-right: 25px;
+                    @include smMax{
+                        flex: 0 0 170px;
+                    }
+                }
+                display: inline-block;
+                vertical-align: middle;
+                width: 200px;
+                font-family: fontFamily(gilroyRegular);
+                font-size: fontSize(fontSize24);
+                line-height: 1.54;
+            }
+        }
+    }
+}

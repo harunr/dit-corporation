@@ -1,0 +1,26 @@
+
+.terms_of_use{
+  & h2{
+    font-size: fontSize(fontSize50);
+    color: primaryColor(blackColor);
+    margin: 200px 0 60px 0;
+    @include smMax{
+      margin: 100px 0 60px 0;
+      margin-bottom: 30px;
+    }
+  }
+  & h3{
+    font-size: fontSize(fontSize34);
+    line-height: 1.76;
+    color: primaryColor(blackColor);
+  }
+  & p{
+    font-size: fontSize(fontSize24);
+    line-height: 2.08;
+    margin: 26px 0 60px 0;
+    color: primaryColor(greyColor);
+    @include smMax{
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "Quarto-Light";
+    src:url('../../fonts/Quarto-Light_Web.woff2') format('woff2'),
+    url('../../fonts/Quarto-Light_Web.woff') format('woff');
+    font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'quartoregular';
+    src: url('../../fonts/quarto_regular-webfont.woff2') format('woff2'),
+         url('../../fonts/quarto_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Quarto-Bold';
+	src:url('../../fonts/woff2/Quarto-Bold_Web.woff2') format('woff2'),
+		url('../../fonts/woff/Quarto-Bold_Web.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'gilroylight';
+    src: url('../../fonts/Gilroy-Light.woff') format('woff'),
+         url('../../fonts/Gilroy-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroyregular';
+    src: url('../../fonts/Gilroy-Regular.woff') format('woff'),
+         url('../../fonts/Gilroy-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroymedium';
+    src: url('../../fonts/Gilroy-Medium.woff') format('woff'),
+         url('../../fonts/Gilroy-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroysemibold';
+    src: url('../../fonts/Gilroy-Semibold.woff') format('woff'),
+         url('../../fonts/Gilroy-Semibold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gilroybold';
+    src: url('../../fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('../../fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroythin';
+    src: url('../../fonts/Gilroy-Thin.woff2') format('woff2'),
+         url('../../fonts/Gilroy-Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gilroyultralight';
+    src: url('../../fonts/Gilroy-UltraLight.woff2') format('woff2'),
+         url('../../fonts/Gilroy-UltraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$fontFamily: (
+    quartoLight: 'Quarto-Light',
+    quartoRegular: 'quartoregular',
+    quartoBold: 'Quarto-Bold',
+    gilroylight: 'gilroylight',
+    gilroyRegular: 'gilroyregular',
+    gilroyMedium: 'gilroymedium',
+    gilroySemiBold: 'gilroysemibold',
+    gilroyBold: 'gilroybold',
+    gilroyThin:'gilroythin',
+    gilroyultralight: 'gilroyultralight',
+);
+
+@function fontFamily($font-family){
+    @return map-get($fontFamily,$font-family);
+}
+
+$fontSize: (
+    fontSize10: 10px,
+    fontSize12: 12px,
+    fontSize13: 13px,
+    fontSize14: 14px,
+    fontSize15: 15px,
+    fontSize16: 16px,
+    fontSize18: 18px,
+    fontSize20: 20px,
+    fontSize22: 22px,
+    fontSize24: 24px,
+    fontSize28: 28px,
+    fontSize30: 30px,
+    fontSize33: 32.8px,
+    fontSize34: 34px,
+    fontSize36: 36px,
+    fontSize40: 40px,
+    fontSize42: 42px,
+    fontSize48: 48px,
+    fontSize50: 50px,
+    fontSize60: 60px,
+    fontSize68: 68px,
+    fontSize70: 70px,
+    fontSize80: 80px,
+    fontSize100: 100px,
+    fontSize112: 112px,
+    fontSize200: 200px
+);
+
+@function fontSize($font-size){
+    @return map-get($fontSize,$font-size);
+}
+
+$primaryColors: (
+    blueColor: #134285,
+    purpleColor: #65318f,
+    blackColor: #111111,
+    greyColor: #9e9e9e,
+    lgreyColor: #949494,
+    whiteColor: #ffffff,
+    lighttealColor: #90e4bb,
+    darktealColor:#77d1a5,
+    lbrown:#9e9e9e,
+    ovelColor: #d3d3d3,
+    commaColor: #ececec,
+);
+
+$secondaryColor : #90e4bb;
+$secondaryHoverColor : #77d1a5;
+$btn-dimension:80px;
+
+@function primaryColor($color-name){
+    @return map-get($primaryColors,$color-name);
+}
+@mixin cuMax {
+    @media(max-width:1240px){
+        @content;
+    }
+}
+@mixin lgFull {
+    @media(min-width:1440px) and (max-width:1900px){
+        @content;
+    }
+}
+@mixin lgMin {
+    @media(min-width:1200px){
+        @content;
+    }
+}
+@mixin lgMax {
+    @media(max-width:1199px){
+        @content;
+    }
+}
+@mixin lgMinMax {
+    @media(min-width:993px) and (max-width:1199px){
+        @content;
+    }
+}
+@mixin mdMin {
+    @media(min-width: 768px) {
+        @content;
+    }
+}
+@mixin mdMinMax {
+    @media(min-width:768px) and (max-width:992px){
+        @content;
+    }
+}
+
+@mixin mdMaxPro {
+    @media(min-width: 1024px) and(max-width: 1366px) {
+        @content;
+    }
+}
+
+@mixin mdMaxPor {
+    @media(max-width: 1024px) {
+        @content;
+    }
+}
+@mixin mdMax {
+    @media(max-width:992px){
+        @content;
+    }
+}
+@mixin smMax {
+    @media(max-width:767px){
+        @content;
+    }
+}
+@mixin smMin {
+    @media(min-width:768px){
+        @content;
+    }
+}
+@mixin smMinMax {
+    @media(min-width:576px) and (max-width:767px){
+        @content;
+    }
+}
+@mixin col{
+    @media(max-width:575px){
+        @content;
+    }
+}

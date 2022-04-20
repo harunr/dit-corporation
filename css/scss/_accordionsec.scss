@@ -1,0 +1,221 @@
+.accordion-section{
+    padding:203px 0px 144px;
+    &.accordion-section-service{
+        padding-top: 163px;
+    }
+   
+    @include smMax {
+        padding:90px 0 75px;
+        &.accordion-section-service{
+            padding-top: 90px;
+        }
+      
+    }
+    .mou-wrap{
+        max-width: 424px;
+        float: right;
+        .common_cta.cta_center{
+            .common_cta_inner{
+                margin:0;
+            }
+        }
+        h3{
+            font-family: fontFamily(quartoRegular);
+            font-size: fontSize(fontSize50);
+            line-height: 60px;
+            color: primaryColor(blackColor);
+            margin-bottom: 36px;
+            max-width: 280px;
+            @include mdMax {
+                font-size: fontSize(fontSize34);
+                line-height: 44px;
+                margin-bottom: 48px;
+                max-width: 100%;
+            }
+        }
+        p{
+            font-family: fontFamily(gilroyRegular);
+            font-size: fontSize(fontSize24);
+            line-height: 50px;
+            color: primaryColor(blackColor);
+            margin-bottom: 38px;
+            @include mdMax {
+                font-size: fontSize(fontSize18);
+                line-height: 36px;
+                margin-bottom: 32px;
+            }
+        }
+        @include smMax {
+            max-width: 100%;
+            float:left;
+           .common_cta{
+               display: none;
+           }
+        }
+        
+    }
+    &.career-accordion{
+        padding-top: 152px;
+        padding-bottom: 152px;
+        background:primaryColor(blackColor);
+        .mou-wrap{
+            h3{
+                color: primaryColor(whiteColor);
+            }
+            p{
+                color: primaryColor(whiteColor);
+                @include smMax {
+                    margin-bottom: 58px;
+                }
+            }
+            @include smMax {
+                .common_cta{
+                    display: block;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        @include smMax {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
+    }
+}
+
+.accordion .card-header:after {
+    content: "-";
+    float: right; 
+    font-family: fontFamily(gilroyMedium);
+    font-size: fontSize(fontSize28);
+    line-height: 28px;
+    color: primaryColor(lighttealColor);
+    position: absolute;
+    margin-top: -6px;
+    height: 21px;
+    right: 43px;
+    z-index: 9;
+    top:50%;
+    @include smMax {
+        right: 10px;
+        margin-top: -12px;
+    }
+}
+.accordion .card-header.collapsed:after {
+    content: "+"; 
+    font-family: fontFamily(gilroyMedium);
+    font-size: fontSize(fontSize28);
+    line-height: 28px;
+    color: #90e4bb;
+}
+
+.accordion{
+    .container{
+        position: static;
+    }
+   .card{
+      border:0px;
+      border-radius: 0px;
+      border-bottom: 1px solid primaryColor(lbrown)!important;
+      padding-bottom: 14px;
+      background: none;
+      @include smMax {
+        padding-bottom: 0px;
+      }
+      .card-header{
+          background: none;
+          border-bottom: 0px solid primaryColor(lbrown);
+          padding:34px 56px 20px 0;
+          cursor: pointer;
+          position: relative;
+          @include smMax {
+            padding:20px 10px 20px 0;
+          }
+          .card-title{
+            font-family: fontFamily(gilroyBold);
+            font-size: fontSize(fontSize24);
+            line-height: 30px;
+            color: primaryColor(blackColor);
+            letter-spacing: 1.5px;
+            @include smMax {
+                font-size: fontSize(fontSize18);
+                line-height: 30px;
+            }
+          }
+      }
+      &:first-child{
+        border-top: 1px solid primaryColor(lbrown)!important;
+      }
+   }
+   .card-body{
+       padding: 0 0 0;
+       font-family: fontFamily(gilroyRegular);
+        font-size: fontSize(fontSize18);
+        line-height: 30px;
+        color: primaryColor(blackColor);
+       p{
+        font-family: fontFamily(gilroyRegular);
+        font-size: fontSize(fontSize18);
+        line-height: 30px;
+        color: primaryColor(blackColor);
+        border-bottom: 22px solid transparent;
+        @include smMax {
+            line-height: 35px;
+            border-bottom: 0 solid transparent;
+        }
+       }
+       @include smMax {
+        padding: 0px 0 30px;
+        line-height: 35px;
+       }
+   }
+   .collapsing {
+    opacity: 0;  
+    transition: 0.3s;
+   // height: auto;
+    }
+    .collapse.show{
+    opacity:1.0;
+    transition: 0.3s;
+    // height: auto;
+    }
+    .collapse{
+    transition: 0.3s;
+   // height: auto;
+    }
+    &.accordion-black{
+        .card{
+            .card-header{
+                .card-title{
+                    color: primaryColor(whiteColor);
+                }
+            }
+        }
+        .card-body{
+            color: primaryColor(whiteColor);
+            p{
+                color: primaryColor(whiteColor);
+            }
+        }
+    }
+}
+.accordion-right{
+    padding-right: 59px;
+    padding-left: 31px;
+    @include smMax {
+        position: static;
+        max-width: 100%;
+        padding-left: 27px;
+        padding-right:27px;
+    }
+}
+
+.accordion-left{
+    padding-right: 50px;
+    padding-left: 40px;
+    @include smMax {
+        position: static;
+        max-width: 100%;
+        padding-right: 27px;
+        padding-left: 27px;
+    }
+}

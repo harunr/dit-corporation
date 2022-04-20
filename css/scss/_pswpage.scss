@@ -1,0 +1,22 @@
+.thank_you_hero.psw-page{
+    h3{
+        font-size: 50px;
+        line-height: 60px;
+        margin-bottom: 62px;
+        @include smMax {
+          font-size: 34px;
+           line-height: 44px;  
+        }
+    }
+    .contact_form{
+        max-width: 425px;
+        margin:0 auto;
+        
+        .input-material{
+            text-align: left;
+        }
+    }
+    .common_cta{
+        margin-top:20px;
+    }
+}

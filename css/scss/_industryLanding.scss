@@ -1,0 +1,82 @@
+.industry_hero{
+    padding-bottom: 220px;
+    h1{
+        width: 1029px;
+        padding: 300px 0 60px;
+        color: primaryColor(blackColor);
+        font-size: fontSize(fontSize50);
+        line-height: 1.2;
+        @include lgMax{
+            width: 100%;
+        }
+        @include smMax{
+            font-size: fontSize(fontSize34);
+            padding: 251px 0 60px;
+        }
+    }
+}
+
+.industry_img{
+    a{
+        display: block;
+        position: relative;
+        height: 100vh;
+        &::before{
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8)); 
+            //linear-gradient(to left, #104082 100%, #65318f 0%);
+            background-blend-mode: normal, screen;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @include mdMinMax{
+            height: 500px;
+        }
+        @include smMax{
+            height: auto;
+        }
+        & > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        ul{
+            position: absolute;
+            left: 60px;
+            bottom: 60px;
+            z-index: 1;
+            padding-right: 30px;
+            @include mdMinMax{
+                padding-right:60px
+            }
+            @include smMax{
+                bottom: 28px;
+                left: 27px;
+            }
+            & li{
+                text-transform: uppercase;
+            }
+            & li:first-child{
+                font-family: fontFamily(quartoLight);
+                font-size: fontSize(fontSize50);
+                line-height: 1.2;
+                margin: 40px 0;
+                @include lgMax{
+                    margin: 20px 0;
+                    font-size: 30px;
+                }
+            }
+            & li:last-child{
+                font-family: fontFamily(gilroySemiBold);
+                font-size: fontSize(fontSize18);
+                letter-spacing: 3px;
+                @include smMax{
+                font-size: fontSize(fontSize16);
+                }
+            }
+        }
+    }
+}

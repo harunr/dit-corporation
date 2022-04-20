@@ -1,0 +1,230 @@
+.client_hero{
+    padding-bottom: 110px;
+    &.without_btn{
+        padding-bottom: 220px;
+        @include smMax{
+        padding-bottom: 0;
+        }
+    }
+    h1{
+        width: 1029px;
+        padding: 300px 0 60px;
+        color: primaryColor(blackColor);
+        font-size: fontSize(fontSize50);
+        line-height: 1.2;
+        @include lgMax{
+            width: 100%;
+        }
+        @include smMax{
+            font-size: fontSize(fontSize34);
+            padding: 251px 0 60px;
+        }
+    }
+}
+.our_client{
+    padding: 70px 60px;
+    background-color: #111111;
+    @include smMax{
+        padding: 70px 27px 50px;
+        &.active-list{
+            padding: 70px 27px 34px;
+        }
+    }
+    h3{
+        line-height: 1.1;
+        padding-bottom: 30px;
+        @include smMax{
+            font-size: fontSize(fontSize34);
+        }
+    }
+    p{
+        font-family: fontFamily(gilroyRegular);
+        font-size: 24px;
+        color: primaryColor(whiteColor);
+        @include smMax{
+            font-size: fontSize(fontSize18);
+        }
+        & span{
+            font-family: fontFamily(gilroySemiBold);
+            line-height: 2.08;
+            border-bottom: 1px solid $secondaryColor;
+            padding-bottom: 2px;
+            cursor: pointer;
+           }
+         
+        @include smMax{
+            font-size: fontSize(fontSize18);
+        }
+    }
+    &.active-list{
+        .dropdown-toggle::after{
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+        }
+    }
+}
+.domain_pro{
+    display: none;
+    padding-top: 38px;
+    border-bottom: 0;
+    li{
+        display: inline-block;
+        margin-right: 30px;
+        position: relative;
+        position: relative;
+        margin-bottom: 26px;
+        @include smMax{
+            margin-right: 30px;
+        }
+        & a{
+            text-transform: uppercase;
+            opacity: 0.4;
+            letter-spacing: 0.89px;
+            color: primaryColor(whiteColor);
+            &.active{
+                opacity: 1;
+                font-family: fontFamily(gilroySemiBold);
+                pointer-events: none;
+            }
+        }
+        & span{
+            position: absolute;
+            right: -15px;
+            font-family: 'Lato', sans-serif;
+            font-size: 10px;
+            top: -1px;
+            font-weight: bold;
+        }
+    }
+}
+.our_client_img{
+    &.industries_landing{
+        a{
+            ul{
+                li{
+                    &:first-child{
+                        font-family: fontFamily(quartoLight);
+                        font-size: fontSize(fontSize50);
+                        line-height: 1.2;
+                        margin: 40px 0;
+                        @include lgMax{
+                            margin: 20px 0;
+                            font-size: 30px;
+                        }
+                    }
+                    &:last-child{
+                        color: primaryColor(whiteColor);
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+    a{
+        display: block;
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        &::before{
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8)); 
+            //linear-gradient(to left, #104082 100%, #65318f 0%);
+            background-blend-mode: normal, screen;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @include mdMinMax{
+            height: 500px;
+        }
+        @include smMax{
+            height: auto;
+        }
+        & > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &.hover_ele{
+            & > .ci-image-wrapper{
+                overflow: hidden!important;
+                &:hover{
+                    & .ci-image-loaded{
+                        transform: scale(1.2);
+                        -webkit-transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        & .ci-image-wrapper > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+            transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+        }
+        ul{
+            position: absolute;
+            left: 60px;
+            bottom: 60px;
+            z-index: 1;
+            padding-right: 30px;
+            @include mdMinMax{
+                padding-right:60px
+            }
+            @include smMax{
+                bottom: 28px;
+                left: 27px;
+            }
+            & li{
+                text-transform: uppercase;
+                img{
+                    max-width: 150px;
+                    // @include lgMin{
+                    //     width: auto!important;
+                    // }
+                    // @include lgMax{
+                    //     max-width: 150px;
+                    //     display:inline-block
+                    // }
+                }
+            }
+            & li:nth-child(2){
+                font-family: fontFamily(quartoLight);
+                font-size: fontSize(fontSize50);
+                line-height: 1.2;
+                margin: 40px 0;
+                @include lgMax{
+                    margin: 20px 0;
+                    font-size: 30px;
+                }
+            }
+            & li:last-child{
+                font-family: fontFamily(gilroySemiBold);
+                font-size: fontSize(fontSize18);
+                color: $secondaryColor;
+                letter-spacing: 3px;
+                @include smMax{
+                font-size: fontSize(fontSize16);
+                }
+            }
+        }
+        &:hover{
+            & .bgimg{
+                transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+            } 
+        }
+    }
+   
+}
+
+@keyframes bottomToTop {
+    from { top: 200px; }
+    to   { top: 0; }
+}

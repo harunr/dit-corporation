@@ -1,0 +1,221 @@
+.summary_content{
+    &.summary-view-out{
+        & .summary_content_header{
+            animation: topanimationremove 1s!important;
+            top: -76px;
+        }
+    }
+    .summary_content_header{
+        width: 100%;
+        background: primaryColor(whiteColor);
+        z-index: 999;
+        top: 0;
+        @include smMax{
+            background: primaryColor(blackColor);
+            .pad0{
+                padding: 0;
+            }
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include smMax{
+                overflow: auto;
+                scroll-behavior: smooth;
+            }
+            & li{
+                    padding: 26px 0;
+                @include smMax{
+                    padding: 16px 25px;
+                }
+                &.active-head{
+                    & a{
+                        font-family: fontFamily(gilroyBold);
+                        color: primaryColor(blackColor);
+                        opacity: 1;
+                        @include smMax{
+                            font-family: fontFamily(quartoRegular);
+                            color: primaryColor(whiteColor);
+                            font-size: fontSize(fontSize24);
+                            // -webkit-background-clip: inherit;
+                            // -webkit-text-fill-color: inherit;
+                            // background-image:none;
+                            border-bottom: 3px solid $secondaryColor;
+                        }
+                    }
+                }
+                & a{
+                    font-family: fontFamily(gilroySemiBold);
+                    font-size: fontSize(fontSize15);
+                    color: #515151;
+                    opacity: 0.5;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                    display: block;
+                    @include mdMinMax{
+                        font-size: fontSize(fontSize12);
+                    }
+                    @include smMax{
+                        font-family: fontFamily(quartoLight);
+                        font-size: fontSize(fontSize24);
+                        // background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, #ffffff);
+                        // -webkit-background-clip: text;
+                        // -webkit-text-fill-color: transparent;
+                        opacity: 1;
+                        color: primaryColor(whiteColor);
+                        border-bottom: 3px solid transparent;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+    .summary_content_main{
+        width: 100%;
+        height: 100vh;
+        background: primaryColor(blackColor);
+        display: flex;
+        align-items: center;
+        @include mdMinMax{
+            height: auto;
+        }
+        @include smMax{
+            height: auto;
+        }
+        & .readmoreipad{
+            font-size: fontSize(fontSize14);
+            color: primaryColor(whiteColor);
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: none;
+            &:after{
+                width: 25px;
+                height: 10px;
+                display: inline-block;
+                content: "";
+                background: url(../../images/arrow-white.png) no-repeat right center;
+                margin-left: 5px;
+            }
+        }
+        @include mdMinMax{
+            .readmoreipad{
+                display: block;
+            }
+        }
+        @include smMax{
+            .readmoreipad{
+                display: block;
+            }
+        }
+        &.rightImg{
+            & .ordertwo{
+                order: 2;
+                @include mdMinMax{
+                    order: 1;
+                }
+                @include smMax{
+                    order: 1;
+                }
+            }
+            & .orderone{
+                order: 1;
+                @include mdMinMax{
+                    order: 2;
+                }
+                @include smMax{
+                    order: 2;
+                }
+            }
+            & .summary_content_main_img{
+                left: inherit;
+                right: 0;
+            }
+            & .summary_content_main_content{
+                padding: 0 53px 0 0;
+                @include mdMinMax{
+                    padding: 550px 0 70px 0;
+                    }
+                @include smMax{
+                padding: 370px 0 70px 0;
+                }
+            }
+        }
+        & .fixed_height{
+            height: 480px;
+            @include mdMinMax{
+                height: auto;
+            }
+            @include smMax{
+                height: auto;
+            }
+        }
+        & .summary_content_main_img{
+            position: absolute;
+            left: 0;
+            height: 480px;
+            width: calc(50% - 53px);
+            & .ci-image-wrapper{
+                width: 100%!important;
+            }
+            @include mdMinMax{
+                height: 480px;
+                width: 100%;
+            }
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;  
+            }
+            @include smMax{
+                height: 300px;
+                width: 100%;
+            }
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        & .summary_content_main_content{
+            padding: 0 0 0 53px;
+            @include mdMinMax{
+                padding: 550px 0 70px 0;
+                }
+            @include smMax{
+            padding: 370px 0 70px 0;
+            }
+            & h3{
+                line-height: 1.2;
+                padding: 0px 0 35px 0;
+                @include smMax{
+                    font-size: fontSize(fontSize34);
+                }
+            }
+            & > a{
+                display: block;
+                font-size: fontSize(fontSize24);
+                color: primaryColor(whiteColor);
+                padding: 0px 0 20px 0;
+                line-height: 2.08;
+                max-height: 380px;
+                @include smMax{
+                    font-size: fontSize(fontSize18);
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}
+@keyframes topanimation {
+    from { top: -76px; }
+    to   { top: 0; }
+}
+@keyframes topanimationremove {
+    from { top: 0; }
+    to   { top: -76px;}
+}
